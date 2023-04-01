@@ -1,0 +1,22 @@
+li>a{
+  filter: drop-shadow(0px 0px 2px #fff)
+}
+li.essay-test,
+li.evaluation-test{
+  &.now{
+    animation: 2000ms linear 0ms infinite forwards loading;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 0%, #adbdeb 0%, #adbdeb 30%, #ffffff 30%, #ffffff 100%);
+    background-size: 100%;
+  }
+  & a.is-gate-closed::after{
+    background-image: none !important;background-color: #9ba4bfaa;
+  }
+}
+@keyframes loading {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 470px;
+  }
+}
