@@ -87,7 +87,7 @@ function startup(){
         window.top.document.head.appendChild(swalst);
         let indicatorStyle = document.createElement('link');
         indicatorStyle.rel = "stylesheet";
-        indicatorStyle.href = "//aika-toki.github.io/others/library/Dolphone/Dolphone_indicator.css";
+        indicatorStyle.href = "//cdn.jsdelivr.net/gh/yautaenon/Dolphone@master/Dolphone/Dolphone_indicator.css";
         indicatorStyle.id = "indicatorStyle";
         window.top.document.head.appendChild(indicatorStyle);
         document.body.classList.add('izialready');
@@ -141,7 +141,7 @@ function reinject(){
         document.querySelector('script#di').remove();
     }
     let e=document.createElement('script');
-    e.src="https://aika-toki.github.io/others/javascript/Dolpthone_inject"+versionType+".js";
+    e.src="//cdn.jsdelivr.net/gh/yautaenon/Dolphone@master/Dolpthone_inject"+versionType+".js";
     e.id="di";
     e.className="reinjected";
     window.top.document.head.appendChild(e);
