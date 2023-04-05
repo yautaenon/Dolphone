@@ -179,7 +179,7 @@ function indicatorUpdate(){
         let lcls = listel[i].classList;
         if(lcls.contains('movie')){
             if(lcls.contains('good')){
-                listel[i].style.backgroundColor = "#9fb";
+                //listel[i].style.backgroundColor = "#9fb";
             }
         } else if(lcls.contains('evaluation-test')||lcls.contains('essay-test')){
             if(lcls.contains('good')){
