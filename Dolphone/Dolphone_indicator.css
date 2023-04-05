@@ -1,4 +1,4 @@
-li > a {
+ul.u-list a {
   filter: drop-shadow(0px 0px 2px #fff);
 }
 
@@ -21,4 +21,7 @@ li.evaluation-test a.is-gate-closed::after {
   100% {
     background-position-x: 470px;
   }
+}
+li.movie.good {
+  background: #9fb;
 }/*# sourceMappingURL=Dolphone_indicator.css.map */
