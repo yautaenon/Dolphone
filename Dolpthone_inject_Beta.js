@@ -1,5 +1,6 @@
-window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-001 Beta";
-versionType = "_Beta";
+window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-002 Beta";
+window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "17b8827";
+window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
 // main script
 subsound = new Audio('https://aika-toki.github.io/others/library/NotiSound/003_1s.wav');
 notifsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/002_3s.wav");
@@ -87,7 +88,7 @@ function startup(){
         window.top.document.head.appendChild(swalst);
         let indicatorStyle = document.createElement('link');
         indicatorStyle.rel = "stylesheet";
-        indicatorStyle.href = "//cdn.jsdelivr.net/gh/yautaenon/Dolphone@master/Dolphone/Dolphone_indicator.css";
+        indicatorStyle.href = "//cdn.jsdelivr.net/gh/yautaenon/Dolphone@"+window_b9012ye1by98ryn98dy1_Dolpthone_BranchID+"/Dolphone/Dolphone_indicator.css";
         indicatorStyle.id = "indicatorStyle";
         window.top.document.head.appendChild(indicatorStyle);
         document.body.classList.add('izialready');
@@ -141,7 +142,7 @@ function reinject(){
         document.querySelector('script#di').remove();
     }
     let e=document.createElement('script');
-    e.src="//cdn.jsdelivr.net/gh/yautaenon/Dolphone@master/Dolpthone_inject"+versionType+".js";
+    e.src="//cdn.jsdelivr.net/gh/yautaenon/Dolphone@"+window_b9012ye1by98ryn98dy1_Dolpthone_BranchID+"/Dolpthone_inject"+window_ony98gvayn9fj8hg98ha_Dolpthone_versionType+".js";
     e.id="di";
     e.className="reinjected";
     window.top.document.head.appendChild(e);

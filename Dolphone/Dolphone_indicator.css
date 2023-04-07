@@ -24,4 +24,12 @@ li.evaluation-test a.is-gate-closed::after {
 }
 li.movie.good {
   background: #9fb;
+}
+
+li.evaluation-test.good, li.essay-test.good {
+  background: #adbdeb;
+}
+
+li.movie > a.is-selected {
+  background: linear-gradient(90deg, #9fb 0%, #9fb var(--movie-progress), rgba(0, 0, 0, 0) var(--movie-progress), rgba(0, 0, 0, 0) 100%);
 }/*# sourceMappingURL=Dolphone_indicator.css.map */
