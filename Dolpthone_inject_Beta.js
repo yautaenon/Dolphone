@@ -159,10 +159,11 @@ function indicatorsetup(){
         }
         if(nowel!==null){
         nowel=listel[nowel];
-        nowel.style.background = `linear-gradient(90deg, #ddd 0%,#ddd 100%)`
+        //nowel.style.background = `linear-gradient(90deg, #ddd 0%,#ddd 100%)`
         movieel = document.querySelector('iframe').contentDocument.querySelector('video');
         let percent = Math.round((movieel.currentTime/movieel.duration)*1000)/10;
-        nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
+        nowel.style.setProperty('--movie-progress',`${percent}%`);
+        //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
         document.querySelector('.progress-circle-color').setAttribute('stroke-dashoffset',String(100-percent));
         }
     },20);
@@ -183,7 +184,7 @@ function indicatorUpdate(){
             }
         } else if(lcls.contains('evaluation-test')||lcls.contains('essay-test')){
             if(lcls.contains('good')){
-                listel[i].style.background = "#adbdeb";
+                // listel[i].style.background = "#adbdeb";
             }
             if(listel[i].querySelector('a').classList.contains('is-selected')){
                 listel[i].classList.add('now');
