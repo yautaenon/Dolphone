@@ -1,4 +1,5 @@
 window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-002 Beta";
+var window_b9012ye1by98ryn98dy1_Dolpthone_BranchID;
 if(window_b9012ye1by98ryn98dy1_Dolpthone_BranchID=="") window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "128995f";
 window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
 // main script
