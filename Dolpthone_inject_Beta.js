@@ -1,5 +1,5 @@
 window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-002 Beta";
-window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "17b8827";
+if(window_b9012ye1by98ryn98dy1_Dolpthone_BranchID=="") window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "a3195ad";
 window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
 // main script
 subsound = new Audio('https://aika-toki.github.io/others/library/NotiSound/003_1s.wav');
