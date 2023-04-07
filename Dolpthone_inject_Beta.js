@@ -1,4 +1,4 @@
-window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-000 Beta";
+window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-001 Beta";
 versionType = "_Beta";
 // main script
 subsound = new Audio('https://aika-toki.github.io/others/library/NotiSound/003_1s.wav');
@@ -162,7 +162,7 @@ function indicatorsetup(){
         //nowel.style.background = `linear-gradient(90deg, #ddd 0%,#ddd 100%)`
         movieel = document.querySelector('iframe').contentDocument.querySelector('video');
         let percent = Math.round((movieel.currentTime/movieel.duration)*1000)/10;
-        nowel.style.setProperty('--movie-progress',`${percent}%`);
+        nowel.querySelector('a').style.setProperty('--movie-progress',`${percent}%`);
         //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
         document.querySelector('.progress-circle-color').setAttribute('stroke-dashoffset',String(100-percent));
         }

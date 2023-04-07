@@ -26,6 +26,6 @@ li.movie.good {
 li.evaluation-test.good, li.essay-test.good {
   background: #adbdeb;
 }
-li.movie a.is-selected{
+li.movie>a.is-selected{
   background: linear-gradient(90deg, #9fb 0%, #9fb var(--movie-progress),#0000 var(--movie-progress),#0000 100%);
 }
