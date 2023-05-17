@@ -50,61 +50,15 @@
       --md-sys-color-surface-container-highest: #353539;
       --md-sys-color-surface-container-high: #29292d;
       --md-sys-color-shadow: #000;
-      @media screen and (-webkit-min-device-pixel-ratio: 2) {
-        --md-sys-shape-corner-extra-small: 12px;
-        --md-sys-shape-corner-medium: 36px;
-        --textarea-width-outline: 3px;
-        --md-sys-elevation-level0: 0px;
-        --md-sys-elevation-level1: 3px;
-        --md-sys-elevation-level2: 9px;
-        --md-sys-elevation-level3: 18px;
-        --md-sys-elevation-level4: 24px;
-        --md-sys-elevation-level5: 36px;
-      }
-      @media screen and (-webkit-max-device-pixel-ratio: 2) {
-        --md-sys-shape-corner-extra-small: 8px;
-        --md-sys-shape-corner-medium: 24px;
-        --textarea-width-outline: 2px;
-        --md-sys-elevation-level0: 0px;
-        --md-sys-elevation-level1: 2px;
-        --md-sys-elevation-level2: 6px;
-        --md-sys-elevation-level3: 12px;
-        --md-sys-elevation-level4: 16px;
-        --md-sys-elevation-level5: 24px;
-      }
-      @media screen and (-webkit-max-device-pixel-ratio: 1.5) {
-        --md-sys-shape-corner-extra-small: 6px;
-        --md-sys-shape-corner-medium: 18px;
-        --textarea-width-outline: 2px;
-        --md-sys-elevation-level0: 0px;
-        --md-sys-elevation-level1: 2px;
-        --md-sys-elevation-level2: 5px;
-        --md-sys-elevation-level3: 9px;
-        --md-sys-elevation-level4: 12px;
-        --md-sys-elevation-level5: 18px;
-      }
-      @media screen and (-webkit-max-device-pixel-ratio: 1) {
-        --md-sys-shape-corner-extra-small: 4px;
-        --md-sys-shape-corner-medium: 12px;
-        --textarea-width-outline: 1px;
-        --md-sys-elevation-level0: 0px;
-        --md-sys-elevation-level1: 1px;
-        --md-sys-elevation-level2: 3px;
-        --md-sys-elevation-level3: 6px;
-        --md-sys-elevation-level4: 8px;
-        --md-sys-elevation-level5: 12px;
-      }
-      @media screen and (-webkit-max-device-pixel-ratio: 0.75) {
-        --md-sys-shape-corner-extra-small: 3px;
-        --md-sys-shape-corner-medium: 9px;
-        --textarea-width-outline: 1px;
-        --md-sys-elevation-level0: 0px;
-        --md-sys-elevation-level1: 1px;
-        --md-sys-elevation-level2: 2px;
-        --md-sys-elevation-level3: 5px;
-        --md-sys-elevation-level4: 6px;
-        --md-sys-elevation-level5: 9px;
-      }
+      --md-sys-shape-corner-extra-small: 4px;
+      --md-sys-shape-corner-medium: 12px;
+      --textarea-width-outline: 1px;
+      --md-sys-elevation-level0: 0px;
+      --md-sys-elevation-level1: 1px;
+      --md-sys-elevation-level2: 3px;
+      --md-sys-elevation-level3: 6px;
+      --md-sys-elevation-level4: 8px;
+      --md-sys-elevation-level5: 12px;
     }
     body {
       color: var(--onBackground);
