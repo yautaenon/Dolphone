@@ -156,7 +156,7 @@ function startup() {
 function veralart(version) {
   let version_sentense = `version ${version} has applied.`;
   iziToast.show({
-    position: "topRight",
+    position: "bottomRight",
     title: "Dolpthone",
     message: version_sentense,
     timeout: 5000,
