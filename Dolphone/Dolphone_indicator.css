@@ -26,7 +26,8 @@ li.movie.good {
   background: #9fb;
 }
 
-li.evaluation-test.good, li.essay-test.good {
+li.evaluation-test.good,
+li.essay-test.good {
   background: #adbdeb;
 }
 

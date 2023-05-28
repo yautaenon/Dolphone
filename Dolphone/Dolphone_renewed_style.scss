@@ -256,8 +256,9 @@ textarea:focus::placeholder {
   background-color: #000;
   color: #fffabc;
 }
-.u-modal-window > .modal-window-inner > .modal-window-content {
-  background-color: #333;
+.u-modal-window > .modal-window-inner > .modal-window-content,
+.fjHpWC {
+  background-color: var(--background);
 }
 .u-button.type-warning-light {
   border: solid 1px #f55151;

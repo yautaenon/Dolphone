@@ -290,8 +290,9 @@ textarea:focus::placeholder {
   color: #fffabc;
 }
 
-.u-modal-window > .modal-window-inner > .modal-window-content {
-  background-color: #333;
+.u-modal-window > .modal-window-inner > .modal-window-content,
+.fjHpWC {
+  background-color: var(--background);
 }
 
 .u-button.type-warning-light {
