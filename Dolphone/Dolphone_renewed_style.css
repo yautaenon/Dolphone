@@ -142,7 +142,7 @@ a:visited {
 }
 
 .u-list-header {
-  border: solid 1px #222222;
+  border: solid 1px var(--outline);
 }
 
 .u-card {
