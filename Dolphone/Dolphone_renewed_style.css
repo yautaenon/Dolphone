@@ -102,6 +102,15 @@ body {
   font-family: "Noto Sans JP";
 }
 
+.cCFDtC {
+  color: var(--onBackground);
+  background-color: var(--background);
+}
+
+.bgJBOA {
+  border-color: var(--outline);
+}
+
 .wrapper .container header h1.resource-title {
   position: relative;
   min-height: 46px;
@@ -125,7 +134,7 @@ body {
 a,
 a:hover,
 a:visited {
-  color: #7b97ea;
+  color: var(--primary);
 }
 
 .u-list-header {
@@ -196,8 +205,8 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
 }
 
 .exercise .section-item .type-descriptive .answers {
-  border: solid 1px #333;
-  background: #000;
+  border: solid 1px var(--outline);
+  background: var(--background);
 }
 
 input[type=text],
@@ -319,7 +328,7 @@ body.evaluation-test.state-clear .wrapper .container header h1.resource-title::b
 .kXUtWr {
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
-  border-bottom: 2px solid #7b97ea;
+  border-bottom: 2px solid var(--primary);
 }
 
 div.global--wrapper {
@@ -338,12 +347,12 @@ div.global--wrapper {
 
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-filter-active {
   color: #ffffff;
-  background-color: #7b97ea;
-  border: 1px solid #7b97ea;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .p-chapter-show .l-column-common.section .u-filter .u-filter-icon-active {
-  color: #7b97ea;
+  color: var(--primary);
 }
 
 .wrapper .footer {
@@ -352,15 +361,15 @@ div.global--wrapper {
 }
 
 .u-button.type-primary-light {
-  border: solid 1px #7b97ea;
+  border: solid 1px var(--primary);
   background-color: #000;
-  color: #7b97ea;
+  color: var(--primary);
   font-weight: 900;
 }
 
 .u-button.type-primary-light:hover {
   filter: none;
-  background-color: #7b97ea;
+  background-color: var(--primary);
   color: #fff;
 }
 
@@ -601,7 +610,7 @@ li.essay-test:has(> a.is-selected),
 li.evaluation-test:has(> a.is-selected),
 li.evaluation-report:has(> a.is-selected),
 li.essay-report:has(> a.is-selected) {
-  border-right: solid 3px #7b97ea !important;
+  border-right: solid 3px var(--primary) !important;
 }
 
 .mode-contents-watch > .l-wrapper .p-chapter-show .l-contents.p-chapters-show .l-column-common.section .u-list li a.is-selected {
@@ -642,8 +651,8 @@ li.evaluation-report:has(> a.is-selected) {
 .exercise .section-item .type-descriptive.answer-area[data-status=initial][data-focus=true] textarea,
 .exercise .section-item .type-descriptive.answer-area[data-status=initial][data-focus=true] textarea:focus,
 .exercise .section-item .type-descriptive.answer-area[data-status=initial][data-focus=true] textarea:focus-visible {
-  border: 2px solid #7b97ea;
-  box-shadow: 0 0 0 1px #7b97ea;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
 .exercise .badge-image.badge-image-solved {
