@@ -165,7 +165,7 @@ a:visited {
 }
 
 .u-progress {
-  background-color: rgba(255, 255, 255, 0.09);
+  background-color: var(--md-sys-color-surface-container-highest);
 }
 
 .u-progress > .u-progress-labels li {
@@ -294,7 +294,7 @@ textarea:focus::placeholder {
 }
 
 .u-progress > .u-progress-bar li.primary {
-  background-color: #00802b;
+  background-color: var(--tertiary);
 }
 
 .exercise .section-item.explanation {
