@@ -218,9 +218,9 @@ function indicatorsetup() {
         .querySelector("a")
         .style.setProperty("--movie-progress", `${percent}%`);
       //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
-      document
-        .querySelector(".progress-circle-color")
-        .setAttribute("stroke-dashoffset", String(100 - percent));
+      //   document
+      //     .querySelector(".progress-circle-color")
+      //     .setAttribute("stroke-dashoffset", String(100 - percent));
     }
   }, 20);
   libalert("Indicator", `Process started; id: ${indic}`);
