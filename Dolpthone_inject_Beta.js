@@ -1,6 +1,6 @@
 window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-003 Beta";
 var window_b9012ye1by98ryn98dy1_Dolpthone_BranchID;
-let dolphoneJS, dolphoneCSS, dolphoneIndicator;
+var dolphoneJS, dolphoneCSS, dolphoneIndicator;
 $.getJSON(
   "https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5xVi_1DLFOy8Qe-n4nt8dSq84laKWZf3Ey4iUKM/exec?id=" +
     ProductKey,
