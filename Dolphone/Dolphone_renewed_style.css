@@ -171,6 +171,8 @@ a:visited {
 
 .u-list-header {
   border: solid 1px var(--outline);
+  border-top-left-radius: var(--md-sys-shape-corner-medium);
+  border-top-right-radius: var(--md-sys-shape-corner-medium);
 }
 
 .u-card {
