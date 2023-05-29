@@ -1,10 +1,4 @@
-// /* ==UserStyle==
-// @name         N yobiko with M3
-// @version      20230517.21.00
-// @namespace    ?
-// ==/UserStyle== */
-
-// @-moz-document domain("www.nnn.ed.nico") {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap");
 @media (prefers-color-scheme: light) {
   html {
     --primary: #4d57a9;
@@ -92,8 +86,13 @@ html {
   --md-sys-color-surface-container-highest: #353539;
   --md-sys-color-surface-container-high: #29292d;
   --md-sys-color-shadow: #000;
+  --md-sys-shape-corner-none: 0px;
   --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
   --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 50%;
   --textarea-width-outline: 1px;
   --md-sys-elevation-level0: 0px;
   --md-sys-elevation-level1: 1px;
@@ -299,9 +298,9 @@ textarea:focus::placeholder {
   background-color: var(--background);
 }
 .u-button.type-warning-light {
-  border: solid 1px #f55151;
-  background-color: #333;
-  color: #f55151;
+  border: solid 1px var(--outline);
+  background-color: var(--surface);
+  color: var(error);
 }
 .u-button.type-accent {
   border: solid 1px #00802b;
@@ -655,4 +654,3 @@ ul.u-list a {
   letter-spacing: var(--md-sys-typescale-body-medium-tracking);
   color: var(--md-sys-color-on-surface-variant);
 }
-// }
