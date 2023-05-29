@@ -142,6 +142,10 @@ a:visited {
   box-shadow: var(--surfaceVariant) 0px -12px 12px;
 }
 
+.gFloFE {
+  color: var(--onSurfaceVariant);
+}
+
 .dmExPN:hover {
   background-color: var(--md-sys-color-surface-container-highest);
 }
