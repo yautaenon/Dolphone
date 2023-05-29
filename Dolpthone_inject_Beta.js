@@ -29,9 +29,7 @@ $.getJSON(
       if (!document.querySelector("iframe")) {
         next();
       }
-      setTimeout(() => {
-        subscribe();
-      }, 5000);
+      subscribe();
     }, 1000);
   }
 );
