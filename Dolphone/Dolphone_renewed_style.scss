@@ -166,8 +166,8 @@ a:visited {
   border: solid 1px var(--outline);
 }
 .u-card {
-  border: solid 1px #444444;
-  background-color: #000000;
+  border: solid 1px var(--outline);
+  background-color: var(--surfaceVariant);
 }
 .typo-page-title {
   color: #dddddd;
