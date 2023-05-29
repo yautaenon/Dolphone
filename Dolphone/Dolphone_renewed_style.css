@@ -137,6 +137,11 @@ a:visited {
   background-color: var(--surfaceVariant);
 }
 
+.jMWbpA {
+  background: var(--surfaceVariant);
+  box-shadow: var(--surfaceVariant) 0px -12px 12px;
+}
+
 .dmExPN:hover {
   background-color: var(--md-sys-color-surface-container-highest);
 }
