@@ -129,7 +129,7 @@ a:visited {
 }
 
 .cCFDtC {
-  color: var(--onBackground);
+  color: var(--onBackground) !important;
   background-color: var(--background);
 }
 
