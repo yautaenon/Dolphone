@@ -185,6 +185,7 @@ a:visited {
   border: solid 1px var(--outline);
   background-color: var(--surfaceVariant);
   border-radius: var(--md-sys-shape-corner-medium);
+  border-width: 1px 0 0;
 }
 
 .typo-page-title {
