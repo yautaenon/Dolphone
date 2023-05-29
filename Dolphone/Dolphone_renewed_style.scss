@@ -158,7 +158,8 @@ a:visited {
 .u-breadcrumbs > li.current:visited {
   color: #ccc;
 }
-.u-progress {
+.u-progress,
+.dlCWCQ {
   background-color: var(--md-sys-color-surface-container-highest);
 }
 .u-progress > .u-progress-labels li {
@@ -258,7 +259,8 @@ textarea:focus::placeholder {
   li.answers-choice.answers-selected[data-correct="true"] {
   background-color: #00802b;
 }
-.u-progress > .u-progress-bar li.primary {
+.u-progress > .u-progress-bar li.primary,
+.gyjsPW {
   background-color: var(--tertiary);
 }
 .exercise .section-item.explanation {

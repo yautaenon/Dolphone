@@ -164,7 +164,8 @@ a:visited {
   color: #ccc;
 }
 
-.u-progress {
+.u-progress,
+.dlCWCQ {
   background-color: var(--md-sys-color-surface-container-highest);
 }
 
@@ -293,7 +294,8 @@ textarea:focus::placeholder {
   background-color: #00802b;
 }
 
-.u-progress > .u-progress-bar li.primary {
+.u-progress > .u-progress-bar li.primary,
+.gyjsPW {
   background-color: var(--tertiary);
 }
 
