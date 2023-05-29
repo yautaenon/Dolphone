@@ -2,7 +2,9 @@
 @media (prefers-color-scheme: light) {
   html {
     --primary: #4d57a9;
+    --primaryHover: #4d57a913;
     --onPrimary: #ffffff;
+    --onPrimaryHover: #ffffff13;
     --primaryContainer: #dfe0ff;
     --onPrimaryContainer: #000a63;
     --secondary: #415aa9;
@@ -32,6 +34,7 @@
     --primary: #bcc2ff;
     --primaryHover: #bcc2ff13;
     --onPrimary: #1b2678;
+    --onPrimaryHover: #1b267813;
     --primaryContainer: #343e90;
     --onPrimaryContainer: #dfe0ff;
     --secondary: #b5c4ff;
@@ -359,6 +362,13 @@ div.global--wrapper {
   background-color: var(--primary);
   border: 1px solid var(--primary);
   font-weight: var(--md-ref-typeface-weight-medium);
+  &:hover {
+    background-image: linear-gradient(
+      90deg,
+      var(--onPrimaryHover),
+      var(--onPrimaryHover)
+    );
+  }
 }
 .p-chapter-show .l-column-common.section .u-filter .u-filter-icon-active {
   color: var(--primary);
