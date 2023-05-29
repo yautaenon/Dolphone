@@ -99,9 +99,6 @@ function subscribe() {
   }
 }
 function videochecker() {
-  let video = window.top.document
-    .querySelector("#modal-inner-iframe")
-    .contentDocument.querySelector("#video-player");
   let renewedStyle = document.createElement("link");
   renewedStyle.rel = "stylesheet";
   renewedStyle.href = dolphoneCSS;
@@ -109,14 +106,23 @@ function videochecker() {
   window.top.document
     .querySelector("#modal-inner-iframe")
     .contentDocument.head.appendChild(renewedStyle);
-  let process = setInterval(() => {
-    if (video.duration <= video.currentTime) {
-      done();
-      libalert("VideoDurationChecker", "process ended.");
-      clearInterval(process);
-    }
-  }, 200);
-  libalert("VideoDurationChecker", "process started.");
+  if (
+    document
+      .querySelector("a.is-selected")
+      .parentElement.classList.contains("movie")
+  ) {
+    let video = window.top.document
+      .querySelector("#modal-inner-iframe")
+      .contentDocument.querySelector("#video-player");
+    let process = setInterval(() => {
+      if (video.duration <= video.currentTime) {
+        done();
+        libalert("VideoDurationChecker", "process ended.");
+        clearInterval(process);
+      }
+    }, 200);
+    libalert("VideoDurationChecker", "process started.");
+  }
 }
 function done() {
   console.log("DONE!");
