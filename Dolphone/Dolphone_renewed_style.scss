@@ -24,6 +24,7 @@
     --outline: #777680;
     --surfaceVariant: #e3e1ec;
     --onSurfaceVariant: #46464f;
+    --md-sys-color-surface-container-highest: #e4e1e6;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -51,6 +52,9 @@
     --outline: #91909a;
     --surfaceVariant: #46464f;
     --onSurfaceVariant: #c7c5d0;
+    --md-sys-color-surface-container-highest: #343438;
+    --md-sys-color-surface-container-high: #29292d;
+    --md-sys-color-shadow: #000;
   }
 }
 html {
@@ -83,9 +87,6 @@ html {
   --md-sys-typescale-headline-small-weight: var(
     --md-ref-typeface-weight-regular
   );
-  --md-sys-color-surface-container-highest: #353539;
-  --md-sys-color-surface-container-high: #29292d;
-  --md-sys-color-shadow: #000;
   --md-sys-shape-corner-none: 0px;
   --md-sys-shape-corner-extra-small: 4px;
   --md-sys-shape-corner-small: 8px;
@@ -169,7 +170,7 @@ a:visited {
 }
 .u-card {
   border: solid 0px var(--outline);
-  background-color: var(--surfaceVariant);
+  background-color: var(--md-sys-color-surface-container-highest);
   border-radius: var(--md-sys-shape-corner-medium);
   border-width: 0 0 0;
   box-shadow: none;

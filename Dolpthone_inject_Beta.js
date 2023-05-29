@@ -1,4 +1,4 @@
-window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-004 Beta";
+window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0-";
 var window_b9012ye1by98ryn98dy1_Dolpthone_BranchID;
 var dolphoneJS, dolphoneCSS, dolphoneIndicator;
 $.getJSON(
@@ -8,7 +8,8 @@ $.getJSON(
     dolphoneJS = data.url;
     dolphoneCSS = data.css;
     dolphoneIndicator = data.indicator;
-    window_5209hbf298hew9jfiowg_Dolpthone_version = data.version;
+    window_5209hbf298hew9jfiowg_Dolpthone_version =
+      window_5209hbf298hew9jfiowg_Dolpthone_version + data.version;
     if (window_b9012ye1by98ryn98dy1_Dolpthone_BranchID === undefined)
       window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "1114918";
     window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
