@@ -58,7 +58,7 @@ function subscribe() {
     console.log(mutations[0]);
     libalert("AppModalObserver", "Successfully detected.");
     inneriframeObserver.observe(document.querySelector("#modal-inner-iframe"), {
-      childList: true,
+      attributes: true,
     });
   });
   modalObserver.observe(
