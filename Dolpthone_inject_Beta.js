@@ -104,9 +104,10 @@ function videochecker() {
     let selectedItemType = Array.from(
       document.querySelector("a.is-selected").parentElement.classList
     );
-    selectedItemType = selectedItemType.includes("good")
-      ? selectedItemType.splice(selectedItemType.indexOf("good"))[0]
-      : selectedItemType[0];
+    selectedItemType.includes("good")
+      ? selectedItemType.splice(selectedItemType.indexOf("good"))
+      : selectedItemType;
+    selectedItemType = selectedItemType[0];
     libalert(
       "SelectedTypeDetecter",
       'Selected Item Type is: "' + selectedItemType + '".'
