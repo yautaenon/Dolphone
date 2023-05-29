@@ -36,7 +36,7 @@ $.getJSON(
 function subscribe() {
   mainalert("Trying to subscribe.");
   subsound.load();
-  let modalObserver = new MutationObserver((mutations) => {
+  if (document.querySelector("#modal-inner-iframe")) {
     let inneriframeObserver = new MutationObserver((_mutations) => {
       console.log(_mutations[0]);
       libalert("InnerIframeObserver", "Successfully detected.");
@@ -55,19 +55,46 @@ function subscribe() {
         }
       }, 800);
     });
-    console.log(mutations[0]);
-    libalert("AppModalObserver", "Successfully detected.");
-    videochecker();
     inneriframeObserver.observe(document.querySelector("#modal-inner-iframe"), {
       attributes: true,
     });
-  });
-  modalObserver.observe(
-    document.querySelector('div[data-react-class="App.Modal"]'),
-    {
-      childList: true,
-    }
-  );
+  } else {
+    let modalObserver = new MutationObserver((mutations) => {
+      let inneriframeObserver = new MutationObserver((_mutations) => {
+        console.log(_mutations[0]);
+        libalert("InnerIframeObserver", "Successfully detected.");
+        setTimeout(() => {
+          if (
+            window.top.document
+              .querySelector("#modal-inner-iframe")
+              .contentDocument.querySelector("#video-player")
+          ) {
+            let video = window.top.document
+              .querySelector("#modal-inner-iframe")
+              .contentDocument.querySelector("#video-player");
+            // video.addEventListener("ended", done);
+            videochecker();
+            subsound.play();
+          }
+        }, 800);
+      });
+      console.log(mutations[0]);
+      libalert("AppModalObserver", "Successfully detected.");
+      videochecker();
+      inneriframeObserver.observe(
+        document.querySelector("#modal-inner-iframe"),
+        {
+          attributes: true,
+        }
+      );
+    });
+    modalObserver.observe(
+      document.querySelector('div[data-react-class="App.Modal"]'),
+      {
+        childList: true,
+      }
+    );
+  }
 }
 function videochecker() {
   let video = window.top.document
