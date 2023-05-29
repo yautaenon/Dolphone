@@ -62,6 +62,7 @@ html {
   --md-ref-typeface-plain: "Noto Sans Medium";
   --md-ref-typeface-brand: "Noto Sans Regular";
   --md-ref-typeface-weight-regular: 400;
+  --md-ref-typeface-weight-medium: 500;
   --md-sys-color-outline: var(--outline);
   --md-sys-color-surface: var(--surface);
   --md-sys-color-on-surface: var(--onSurface);
@@ -404,6 +405,7 @@ div.global--wrapper {
   color: var(--onPrimary);
   background-color: var(--primary);
   border: 1px solid var(--primary);
+  font-weight: var(--md-ref-typeface-weight-medium);
 }
 
 .p-chapter-show .l-column-common.section .u-filter .u-filter-icon-active {
