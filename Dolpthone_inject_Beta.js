@@ -37,21 +37,29 @@ function subscribe() {
   mainalert("Trying to subscribe.");
   subsound.load();
   let modalObserver = new MutationObserver((mutations) => {
+    let inneriframeObserver = new MutationObserver((_mutations) => {
+      console.log(_mutations[0]);
+      libalert("InnerIframeObserver", "Successfully detected.");
+      setTimeout(() => {
+        if (
+          window.top.document
+            .querySelector("#modal-inner-iframe")
+            .contentDocument.querySelector("#video-player")
+        ) {
+          let video = window.top.document
+            .querySelector("#modal-inner-iframe")
+            .contentDocument.querySelector("#video-player");
+          // video.addEventListener("ended", done);
+          videochecker();
+          subsound.play();
+        }
+      }, 800);
+    });
     console.log(mutations[0]);
-    setTimeout(() => {
-      if (
-        window.top.document
-          .querySelector("#modal-inner-iframe")
-          .contentDocument.querySelector("#video-player")
-      ) {
-        let video = window.top.document
-          .querySelector("#modal-inner-iframe")
-          .contentDocument.querySelector("#video-player");
-        // video.addEventListener("ended", done);
-        videochecker();
-        subsound.play();
-      }
-    }, 800);
+    libalert("AppModalObserver", "Successfully detected.");
+    inneriframeObserver.observe(document.querySelector("#modal-inner-iframe"), {
+      childList: true,
+    });
   });
   modalObserver.observe(
     document.querySelector('div[data-react-class="App.Modal"]'),
