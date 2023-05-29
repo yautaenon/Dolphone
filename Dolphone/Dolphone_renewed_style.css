@@ -129,8 +129,8 @@ a:visited {
 }
 
 .cCFDtC {
-  color: var(--onBackground) !important;
-  background-color: var(--background);
+  color: var(--onSurfaceVariant) !important;
+  background-color: var(--surfaceVariant);
 }
 
 .dmExPN:hover {
