@@ -397,7 +397,7 @@ div.global--wrapper {
 }
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-button:hover {
   background-image: linear-gradient(90deg, var(--primaryHover), var(--primaryHover));
-  border: 1px solid calc(var(--outline) + var(--primaryHover));
+  border: 1px solid var(--primary);
 }
 
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-filter-active {

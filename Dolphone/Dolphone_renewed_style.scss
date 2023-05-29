@@ -346,7 +346,7 @@ div.global--wrapper {
       var(--primaryHover),
       var(--primaryHover)
     );
-    border: 1px solid calc(var(--outline) + var(--primaryHover));
+    border: 1px solid var(--primary);
   }
 }
 .p-chapter-show
