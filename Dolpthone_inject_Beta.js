@@ -37,19 +37,21 @@ function subscribe() {
   mainalert("Trying to subscribe.");
   subsound.load();
   let modalObserver = new MutationObserver((mutations) => {
-    console.log(mutations);
-    if (
-      window.top.document
-        .querySelector("#modal-inner-iframe")
-        .contentDocument.querySelector("#video-player")
-    ) {
-      let video = window.top.document
-        .querySelector("#modal-inner-iframe")
-        .contentDocument.querySelector("#video-player");
-      // video.addEventListener("ended", done);
-      videochecker();
-      subsound.play();
-    }
+    console.log(mutations[0]);
+    setTimeout(() => {
+      if (
+        window.top.document
+          .querySelector("#modal-inner-iframe")
+          .contentDocument.querySelector("#video-player")
+      ) {
+        let video = window.top.document
+          .querySelector("#modal-inner-iframe")
+          .contentDocument.querySelector("#video-player");
+        // video.addEventListener("ended", done);
+        videochecker();
+        subsound.play();
+      }
+    }, 800);
   });
   modalObserver.observe(
     document.querySelector('div[data-react-class="App.Modal"]'),
