@@ -43,18 +43,18 @@ function subscribe() {
       console.log(_mutations[0]);
       libalert("InnerIframeObserver", "Successfully detected.");
       setTimeout(() => {
-        if (
-          window.top.document
-            .querySelector("#modal-inner-iframe")
-            .contentDocument.querySelector("#video-player")
-        ) {
-          let video = window.top.document
-            .querySelector("#modal-inner-iframe")
-            .contentDocument.querySelector("#video-player");
-          // video.addEventListener("ended", done);
-          videochecker();
-          subsound.play();
-        }
+        // if (
+        //   window.top.document
+        //     .querySelector("#modal-inner-iframe")
+        //     .contentDocument.querySelector("#video-player")
+        // ) {
+        // let video = window.top.document
+        //   .querySelector("#modal-inner-iframe")
+        //   .contentDocument.querySelector("#video-player");
+        // video.addEventListener("ended", done);
+        videochecker();
+        subsound.play();
+        // }
       }, 800);
     });
     inneriframeObserver.observe(document.querySelector("#modal-inner-iframe"), {
@@ -66,18 +66,12 @@ function subscribe() {
         console.log(_mutations[0]);
         libalert("InnerIframeObserver", "Successfully detected.");
         setTimeout(() => {
-          if (
-            window.top.document
-              .querySelector("#modal-inner-iframe")
-              .contentDocument.querySelector("#video-player")
-          ) {
-            let video = window.top.document
-              .querySelector("#modal-inner-iframe")
-              .contentDocument.querySelector("#video-player");
-            // video.addEventListener("ended", done);
-            videochecker();
-            subsound.play();
-          }
+          // let video = window.top.document
+          //   .querySelector("#modal-inner-iframe")
+          //   .contentDocument.querySelector("#video-player");
+          // video.addEventListener("ended", done);
+          videochecker();
+          subsound.play();
         }, 800);
       });
       console.log(mutations[0]);
@@ -106,11 +100,17 @@ function videochecker() {
   window.top.document
     .querySelector("#modal-inner-iframe")
     .contentDocument.head.appendChild(renewedStyle);
-  if (
-    document
-      .querySelector("a.is-selected")
-      .parentElement.classList.contains("movie")
-  ) {
+  let selectedItemType = Array.from(
+    document.querySelector("a.is-selected").parentElement.classList
+  );
+  selectedItemType = selectedItemType.includes("good")
+    ? selectedItemType.splice(selectedItemType.indexOf("good"))[0]
+    : selectedItemType[0];
+  libalert(
+    "SelectedTypeDetecter",
+    'Selected Item Type is: "' + selectedItemType + '".'
+  );
+  if (selectedItemType == "movie") {
     let video = window.top.document
       .querySelector("#modal-inner-iframe")
       .contentDocument.querySelector("#video-player");
