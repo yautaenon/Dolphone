@@ -142,7 +142,8 @@ a:visited {
   box-shadow: var(--surfaceVariant) 0px -12px 12px;
 }
 
-.gFloFE {
+.gFloFE,
+.gNBbKO {
   color: var(--onSurfaceVariant);
 }
 
