@@ -30,6 +30,7 @@
 @media (prefers-color-scheme: dark) {
   html {
     --primary: #bcc2ff;
+    --primaryHover: #bcc2ff13;
     --onPrimary: #1b2678;
     --primaryContainer: #343e90;
     --onPrimaryContainer: #dfe0ff;
@@ -339,6 +340,10 @@ div.global--wrapper {
   border: 1px solid var(--outline);
   background-color: var(--surface);
   color: var(--primary);
+  &:hover {
+    background-color: var(--primaryHover);
+    border: 1px solid var(--primaryHover);
+  }
 }
 .p-chapter-show
   .l-column-common.section
