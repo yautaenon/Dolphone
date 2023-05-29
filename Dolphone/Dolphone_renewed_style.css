@@ -384,8 +384,9 @@ div.global--wrapper {
 }
 
 .p-chapter-show .l-column-common.section .u-filter {
-  background-color: var(--surfaceVariant);
+  background-color: var(--md-sys-color-surface-container-highest);
   border: solid 1px var(--outline);
+  border-width: 0 0 1px;
 }
 
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-button {
