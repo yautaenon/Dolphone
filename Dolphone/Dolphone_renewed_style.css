@@ -396,8 +396,8 @@ div.global--wrapper {
   color: var(--primary);
 }
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-button:hover {
-  background-color: var(--primaryHover);
-  border: 1px solid var(--primaryHover);
+  background-color: var(--surface)var(--primaryHover);
+  border: 1px solid var(--outline)var(--primaryHover);
 }
 
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-filter-active {

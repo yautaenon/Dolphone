@@ -341,8 +341,8 @@ div.global--wrapper {
   background-color: var(--surface);
   color: var(--primary);
   &:hover {
-    background-color: var(--primaryHover);
-    border: 1px solid var(--primaryHover);
+    background-color: (var(--surface) + var(--primaryHover));
+    border: 1px solid (var(--outline) + var(--primaryHover));
   }
 }
 .p-chapter-show
