@@ -354,7 +354,7 @@ div.global--wrapper {
   .u-filter
   .u-filter-list
   .u-filter-active {
-  color: #ffffff;
+  color: var(--onPrimary);
   background-color: var(--primary);
   border: 1px solid var(--primary);
 }

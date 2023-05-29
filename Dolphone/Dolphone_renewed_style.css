@@ -401,7 +401,7 @@ div.global--wrapper {
 }
 
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-filter-active {
-  color: #ffffff;
+  color: var(--onPrimary);
   background-color: var(--primary);
   border: 1px solid var(--primary);
 }
