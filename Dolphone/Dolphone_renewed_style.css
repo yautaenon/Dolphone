@@ -157,6 +157,10 @@ a:visited {
   border-color: var(--outline);
 }
 
+.huLnpP {
+  border-left-color: var(--secondary);
+}
+
 .dmExPN:hover {
   background-color: var(--md-sys-color-surface-container-highest);
 }
