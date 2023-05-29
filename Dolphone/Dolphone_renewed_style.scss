@@ -107,13 +107,6 @@ body {
   background-color: var(--background);
   font-family: "Noto Sans JP";
 }
-.cCFDtC {
-  color: var(--onBackground);
-  background-color: var(--background);
-}
-.bgJBOA {
-  border-color: var(--outline);
-}
 .wrapper .container header h1.resource-title {
   position: relative;
   min-height: 46px;
@@ -136,6 +129,13 @@ a,
 a:hover,
 a:visited {
   color: var(--primary);
+}
+.cCFDtC {
+  color: var(--onBackground);
+  background-color: var(--background);
+}
+.bgJBOA {
+  border-color: var(--outline);
 }
 .u-list-header {
   border: solid 1px #222222;
