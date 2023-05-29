@@ -38,18 +38,27 @@ $.getJSON(
 function subscribe() {
   mainalert("Trying to subscribe.");
   subsound.load();
-  if (
-    window.top.document
-      .querySelector("#modal-inner-iframe")
-      .contentDocument.querySelector("#video-player")
-  ) {
-    let video = window.top.document
-      .querySelector("#modal-inner-iframe")
-      .contentDocument.querySelector("#video-player");
-    // video.addEventListener("ended", done);
-    videochecker();
-    subsound.play();
-  }
+  let modalObserver = new MutationObserver((mutations) => {
+    console.log(mutations);
+    if (
+      window.top.document
+        .querySelector("#modal-inner-iframe")
+        .contentDocument.querySelector("#video-player")
+    ) {
+      let video = window.top.document
+        .querySelector("#modal-inner-iframe")
+        .contentDocument.querySelector("#video-player");
+      // video.addEventListener("ended", done);
+      videochecker();
+      subsound.play();
+    }
+  });
+  modalObserver.observe(
+    document.querySelector('div[data-react-class="App.Modal"]'),
+    {
+      childList: true,
+    }
+  );
 }
 function videochecker() {
   let video = window.top.document
