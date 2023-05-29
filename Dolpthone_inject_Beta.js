@@ -93,36 +93,38 @@ function subscribe() {
   }
 }
 function videochecker() {
-  let renewedStyle = document.createElement("link");
-  renewedStyle.rel = "stylesheet";
-  renewedStyle.href = dolphoneCSS;
-  renewedStyle.id = "renewedStyle";
-  window.top.document
-    .querySelector("#modal-inner-iframe")
-    .contentDocument.head.appendChild(renewedStyle);
-  let selectedItemType = Array.from(
-    document.querySelector("a.is-selected").parentElement.classList
-  );
-  selectedItemType = selectedItemType.includes("good")
-    ? selectedItemType.splice(selectedItemType.indexOf("good"))[0]
-    : selectedItemType[0];
-  libalert(
-    "SelectedTypeDetecter",
-    'Selected Item Type is: "' + selectedItemType + '".'
-  );
-  if (selectedItemType == "movie") {
-    let video = window.top.document
+  setTimeout(() => {
+    let renewedStyle = document.createElement("link");
+    renewedStyle.rel = "stylesheet";
+    renewedStyle.href = dolphoneCSS;
+    renewedStyle.id = "renewedStyle";
+    window.top.document
       .querySelector("#modal-inner-iframe")
-      .contentDocument.querySelector("#video-player");
-    let process = setInterval(() => {
-      if (video.duration <= video.currentTime) {
-        done();
-        libalert("VideoDurationChecker", "process ended.");
-        clearInterval(process);
-      }
-    }, 200);
-    libalert("VideoDurationChecker", "process started.");
-  }
+      .contentDocument.head.appendChild(renewedStyle);
+    let selectedItemType = Array.from(
+      document.querySelector("a.is-selected").parentElement.classList
+    );
+    selectedItemType = selectedItemType.includes("good")
+      ? selectedItemType.splice(selectedItemType.indexOf("good"))[0]
+      : selectedItemType[0];
+    libalert(
+      "SelectedTypeDetecter",
+      'Selected Item Type is: "' + selectedItemType + '".'
+    );
+    if (selectedItemType == "movie") {
+      let video = window.top.document
+        .querySelector("#modal-inner-iframe")
+        .contentDocument.querySelector("#video-player");
+      let process = setInterval(() => {
+        if (video.duration <= video.currentTime) {
+          done();
+          libalert("VideoDurationChecker", "process ended.");
+          clearInterval(process);
+        }
+      }, 200);
+      libalert("VideoDurationChecker", "process started.");
+    }
+  }, 200);
 }
 function done() {
   console.log("DONE!");
