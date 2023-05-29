@@ -341,7 +341,11 @@ div.global--wrapper {
   background-color: var(--surface);
   color: var(--primary);
   &:hover {
-    background-color: calc(var(--surface) + var(--primaryHover));
+    background-image: linear-gradient(
+      90deg,
+      var(--primaryHover),
+      var(--primaryHover)
+    );
     border: 1px solid calc(var(--outline) + var(--primaryHover));
   }
 }
