@@ -26,10 +26,10 @@ $.getJSON(
     );
     startup();
     setTimeout(() => {
+      subscribe();
       if (!document.querySelector("iframe")) {
         next();
       }
-      subscribe();
     }, 1000);
   }
 );
