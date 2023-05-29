@@ -40,7 +40,6 @@ function subscribe() {
     let inneriframeObserver = new MutationObserver((_mutations) => {
       console.log(_mutations[0]);
       libalert("InnerIframeObserver", "Successfully detected.");
-      videochecker();
       setTimeout(() => {
         if (
           window.top.document
@@ -58,6 +57,7 @@ function subscribe() {
     });
     console.log(mutations[0]);
     libalert("AppModalObserver", "Successfully detected.");
+    videochecker();
     inneriframeObserver.observe(document.querySelector("#modal-inner-iframe"), {
       attributes: true,
     });
