@@ -176,7 +176,7 @@ a:visited {
   box-shadow: none;
 }
 .typo-page-title {
-  color: #dddddd;
+  color: var(--onSurface);
 }
 .u-breadcrumbs > li > a,
 .u-breadcrumbs > li > a:visited {
@@ -336,8 +336,9 @@ div.global--wrapper {
   border-width: 0 0 1px;
 }
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-button {
-  border: 1px solid #333;
-  background-color: #000;
+  border: 1px solid var(--outline);
+  background-color: var(--surface);
+  color: var(--primary);
 }
 .p-chapter-show
   .l-column-common.section
@@ -503,7 +504,7 @@ li.movie.good {
   border-bottom: solid 5px #005c1f !important;
 }
 .u-list.has-linked-children > li > a {
-  color: #fff;
+  color: var(--onSurface);
 }
 .p-chapter-show .l-column-common.section .u-list li.good .comprehension,
 .p-chapter-show .l-column-common.section .u-list li.perfect .comprehension {
