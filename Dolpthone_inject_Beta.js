@@ -8,6 +8,7 @@ $.getJSON(
     dolphoneJS = data.url;
     dolphoneCSS = data.css;
     dolphoneIndicator = data.indicator;
+    window_5209hbf298hew9jfiowg_Dolpthone_version = data.version;
     if (window_b9012ye1by98ryn98dy1_Dolpthone_BranchID === undefined)
       window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "1114918";
     window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
