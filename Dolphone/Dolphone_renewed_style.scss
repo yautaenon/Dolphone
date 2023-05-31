@@ -520,9 +520,9 @@ div.global--wrapper {
   background-color: #222;
 }
 li.movie.good {
-  background: #005c1f;
-  background: #000;
-  border-bottom: solid 5px #005c1f !important;
+  background: var(--tertiary);
+  background: var(--background);
+  border-bottom: solid 5px var(--tertiary) !important;
 }
 .u-list.has-linked-children > li > a {
   color: var(--onSurface);
