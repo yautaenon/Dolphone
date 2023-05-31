@@ -599,7 +599,7 @@ div.global--wrapper {
 
 li.movie.good {
   background: var(--tertiary);
-  background: var(--background);
+  background: var(--md-sys-color-surface-container-highest);
   border-bottom: solid 5px var(--tertiary) !important;
 }
 
