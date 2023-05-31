@@ -608,9 +608,9 @@ li.essay-report:has(> a.is-selected) {
 }
 li.evaluation-test.good,
 li.essay-test.good {
-  background: #435589;
-  background: #000;
-  border-bottom: solid 5px #435589 !important;
+  background: var(--secondary);
+  background: var(--md-sys-color-surface-container-highest);
+  border-bottom: solid 5px var(--secondary) !important;
 }
 li.essay-test.now,
 li.evaluation-test.now {
