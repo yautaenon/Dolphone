@@ -23,6 +23,7 @@
     --onBackground: #1b1b1f;
     --surface: #fffbff;
     --onSurface: #1b1b1f;
+    --onSurfaceHover: #1b1b1f13;
     --outline: #777680;
     --surfaceVariant: #e3e1ec;
     --onSurfaceVariant: #46464f;
@@ -53,6 +54,7 @@
     --onBackground: #e4e1e6;
     --surface: #1b1b1f;
     --onSurface: #e4e1e6;
+    --onSurfeceHover: #e4e1e613;
     --outline: #91909a;
     --surfaceVariant: #46464f;
     --onSurfaceVariant: #c7c5d0;
@@ -437,7 +439,7 @@ div.global--wrapper {
 }
 
 .u-list.has-linked-children > li > a:hover {
-  background-color: rgba(255, 255, 255, 0.3333333333);
+  background-color: var(--onSurfaceHover);
 }
 
 .fqhSVi {
