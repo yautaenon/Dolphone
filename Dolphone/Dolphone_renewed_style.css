@@ -262,6 +262,9 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
   border: solid 1px var(--outline);
   background: var(--background);
 }
+.exercise .section-item .type-descriptive .answers [data-correct=false] {
+  border-color: var(--error);
+}
 
 input[type=text],
 textarea {
