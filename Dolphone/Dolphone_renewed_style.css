@@ -116,6 +116,21 @@ body {
   font-family: "Noto Sans JP";
 }
 
+input[type=text],
+textarea {
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--md-sys-typescale-body-large-font);
+  line-height: var(--md-sys-typescale-body-large-line-height);
+  font-size: var(--md-sys-typescale-body-large-size);
+  font-weight: var(--md-sys-typescale-body-large-weight);
+  letter-spacing: var(--md-sys-typescale-body-large-tracking);
+  border-radius: var(--md-sys-shape-corner-extra-small);
+  border-width: var(--textarea-width-outline);
+  border-color: var(--md-sys-color-outline);
+  transition: border-color linear 0.2s;
+  background: inherit;
+}
+
 .wrapper .container header h1.resource-title {
   position: relative;
   min-height: 46px;
@@ -264,21 +279,6 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
 }
 .exercise .section-item .type-descriptive .answers[data-correct=false] {
   border-color: var(--error);
-}
-
-input[type=text],
-textarea {
-  color: var(--md-sys-color-on-surface) !important;
-  font-family: var(--md-sys-typescale-body-large-font) !important;
-  line-height: var(--md-sys-typescale-body-large-line-height) !important;
-  font-size: var(--md-sys-typescale-body-large-size) !important;
-  font-weight: var(--md-sys-typescale-body-large-weight) !important;
-  letter-spacing: var(--md-sys-typescale-body-large-tracking) !important;
-  border-radius: var(--md-sys-shape-corner-extra-small) !important;
-  border-width: var(--textarea-width-outline) !important;
-  border-color: var(--md-sys-color-outline) !important;
-  transition: border-color linear 0.2s !important;
-  background: inherit !important;
 }
 
 input[type=text] {
