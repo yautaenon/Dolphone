@@ -253,8 +253,9 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
   border-width: var(--textarea-width-outline);
   border-style: solid;
   border-color: var(--md-sys-color-outline);
-  background: inherit;
+  background-color: var(--md-sys-color-surface-container-highest);
   &[data-correct="false"] {
+    background-color: var(--md-sys-color-surface-container-highest);
     border-color: var(--error);
   }
 }
