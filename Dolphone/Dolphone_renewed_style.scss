@@ -260,7 +260,7 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
   border-width: var(--textarea-width-outline);
   border-style: solid;
   border-color: var(--md-sys-color-outline);
-  background-color: var(--md-sys-color-surface-container-highest);
+  background-color: inherit;
   transition-property: border;
   transition-duration: 0.05s;
   transition-timing-function: ease-in-out;
@@ -290,8 +290,8 @@ textarea::placeholder {
   font-size: var(--md-sys-typescale-body-large-size);
   font-weight: var(--md-sys-typescale-body-large-weight);
   letter-spacing: var(--md-sys-typescale-body-large-tracking);
-  transition: line-height linear 0.2s, font-size linear 0.2s,
-    transform linear 0.2s;
+  transition: line-height linear 0.05s, font-size linear 0.05s,
+    transform linear 0.05s;
 }
 input[type="text"]:focus::placeholder,
 textarea:focus::placeholder {
