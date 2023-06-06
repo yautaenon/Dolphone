@@ -20,7 +20,9 @@
     --errorContainer: #ffdad6;
     --onErrorContainer: #410002;
     --background: #fffbff;
+    --backgroundHover: #fffbff13;
     --onBackground: #1b1b1f;
+    --onBackgroundHover: #1b1b1f13;
     --surface: #fffbff;
     --onSurface: #1b1b1f;
     --onSurfaceHover: #1b1b1f13;
@@ -51,7 +53,9 @@
     --errorContainer: #93000a;
     --onErrorContainer: #ffdad6;
     --background: #1b1b1f;
+    --backgroundHover: #1b1b1f13;
     --onBackground: #e4e1e6;
+    --onBackgroundHover: #e4e1e613;
     --surface: #1b1b1f;
     --onSurface: #e4e1e6;
     --onSurfaceHover: #e4e1e613;
