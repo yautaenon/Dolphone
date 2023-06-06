@@ -548,6 +548,12 @@ li.movie.good {
 .u-list.has-linked-children > li > a {
   color: var(--onSurface);
 }
+.p-chapter-show .l-column-common.section .u-list li {
+  &:last-child {
+    border-radius: var(--md-sys-shape-corner-medium);
+  }
+}
+
 .p-chapter-show .l-column-common.section .u-list li.good .comprehension,
 .p-chapter-show .l-column-common.section .u-list li.perfect .comprehension {
   color: var(--tertiary);
