@@ -274,8 +274,12 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
 }
 
 .exercise .section-item .type-descriptive .answers {
-  border: solid 1px var(--outline);
-  background: var(--background);
+  line-height: var(--md-sys-typescale-body-large-line-height);
+  border-radius: var(--md-sys-shape-corner-extra-small);
+  border-width: var(--textarea-width-outline);
+  border-style: solid;
+  border-color: var(--md-sys-color-outline);
+  background: inherit;
 }
 .exercise .section-item .type-descriptive .answers[data-correct=false] {
   border-color: var(--error);
