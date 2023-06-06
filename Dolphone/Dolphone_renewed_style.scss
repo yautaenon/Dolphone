@@ -550,15 +550,15 @@ li.movie.good {
 }
 .p-chapter-show .l-column-common.section .u-list li.good .comprehension,
 .p-chapter-show .l-column-common.section .u-list li.perfect .comprehension {
-  color: #aaa;
+  color: var(--tertiary);
   font-weight: bold;
 }
 .p-chapter-show .l-column-common.section .u-list li .textbook-info {
-  color: #ccc;
+  color: var(--onSurface);
   font-weight: bold;
 }
 .p-chapter-show .l-column-common.section .u-list li .content-amount {
-  color: #ccc;
+  color: var(--onSurface);
   font-weight: bold;
 }
 .u-list.has-linked-children > li {
