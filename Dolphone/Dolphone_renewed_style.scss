@@ -680,7 +680,7 @@ li.evaluation-report:has(> a.is-selected) {
 }
 .exercise .badge-image.badge-image-solved {
   filter: invert(1) hue-rotate(187deg) brightness(1.55);
-  display: none;
+  // display: none;
 }
 .exercise-item:has(.badge-image.badge-image-solved) {
   background-color: var(--md-sys-color-surface) !important;
