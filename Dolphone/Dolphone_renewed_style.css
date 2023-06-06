@@ -646,7 +646,7 @@ li.movie.good {
   border-radius: var(--md-sys-shape-corner-medium);
 }
 .p-chapter-show .l-column-common.section .u-list li:last-child a.is-gate-closed:after {
-  border-radius: var(--md-sys-shape-corner-medium);
+  border-radius: 0px var(--md-sys-shape-corner-medium);
 }
 
 .p-chapter-show .l-column-common.section .u-list li.good .comprehension,

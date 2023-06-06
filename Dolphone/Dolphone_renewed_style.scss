@@ -564,7 +564,7 @@ li.movie.good {
   &:last-child {
     border-radius: var(--md-sys-shape-corner-medium);
     & a.is-gate-closed:after {
-      border-radius: var(--md-sys-shape-corner-medium);
+      border-radius: 0px var(--md-sys-shape-corner-medium);
     }
   }
 }
