@@ -234,7 +234,7 @@ a:visited {
 }
 
 .u-progress > .u-progress-labels li {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--onBackground);
 }
 
 .mode-contents-watch > .l-wrapper .p-chapter-show .l-contents.p-chapters-show {
