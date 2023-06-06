@@ -288,7 +288,7 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
   border-color: var(--md-sys-color-outline);
   background-color: inherit;
   transition-property: border;
-  transition-duration: 0.05s;
+  transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
 }
 .exercise .section-item .type-descriptive .answers[data-correct=false] {
@@ -319,8 +319,8 @@ input[type=text]::-moz-placeholder, textarea::-moz-placeholder {
   font-size: var(--md-sys-typescale-body-large-size);
   font-weight: var(--md-sys-typescale-body-large-weight);
   letter-spacing: var(--md-sys-typescale-body-large-tracking);
-  -moz-transition: line-height linear 0.05s, font-size linear 0.05s, transform linear 0.05s;
-  transition: line-height linear 0.05s, font-size linear 0.05s, transform linear 0.05s;
+  -moz-transition: line-height linear 0.15s, font-size linear 0.15s, transform linear 0.15s;
+  transition: line-height linear 0.15s, font-size linear 0.15s, transform linear 0.15s;
 }
 
 input[type=text]::placeholder,
@@ -331,7 +331,7 @@ textarea::placeholder {
   font-size: var(--md-sys-typescale-body-large-size);
   font-weight: var(--md-sys-typescale-body-large-weight);
   letter-spacing: var(--md-sys-typescale-body-large-tracking);
-  transition: line-height linear 0.05s, font-size linear 0.05s, transform linear 0.05s;
+  transition: line-height linear 0.15s, font-size linear 0.15s, transform linear 0.15s;
 }
 
 input[type=text]:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
