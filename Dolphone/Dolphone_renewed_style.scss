@@ -236,7 +236,7 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
 .exercise .section-item .type-descriptive .answers {
   border: solid 1px var(--outline);
   background: var(--background);
-  & [data-correct="false"] {
+  &[data-correct="false"] {
     border-color: var(--error);
   }
 }
