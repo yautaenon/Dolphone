@@ -242,6 +242,15 @@ a:visited {
   height: 4px;
 }
 
+.u-progress.size-l {
+  height: 4px;
+  border-radius: var(--md-sys-shape-corner-none);
+}
+.u-progress.size-l > .u-progress-bar > li {
+  height: 4px;
+  border-radius: var(--md-sys-shape-corner-none);
+}
+
 .u-progress > .u-progress-labels li {
   color: var(--onBackground);
   text-shadow: 1px 1px 2px var(--md-sys-color-shadow);
