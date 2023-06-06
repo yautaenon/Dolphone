@@ -125,7 +125,7 @@ function videochecker() {
       }, 200);
       libalert("VideoDurationChecker", "process started.");
     }
-  }, 800);
+  }, 0);
 }
 function done() {
   console.log("DONE!");
