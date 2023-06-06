@@ -563,7 +563,7 @@ li.movie.good {
 .p-chapter-show .l-column-common.section .u-list li {
   &:last-child {
     border-radius: var(--md-sys-shape-corner-medium);
-    & a.is-gate-closed {
+    & a.is-gate-closed:after {
       border-radius: var(--md-sys-shape-corner-medium);
     }
   }
