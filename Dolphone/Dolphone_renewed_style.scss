@@ -203,6 +203,9 @@ a:visited {
 .typo-page-title {
   color: var(--onSurface);
 }
+.divider {
+  border-color: var(--outline);
+}
 .u-breadcrumbs > li > a,
 .u-breadcrumbs > li > a:visited {
   color: #aaa;
@@ -215,6 +218,7 @@ a:visited {
 .dlCWCQ,
 .grfyIa {
   background-color: var(--md-sys-color-surface-container-highest);
+  height: 4px;
 }
 .u-progress > .u-progress-labels li {
   color: var(--onBackground);
