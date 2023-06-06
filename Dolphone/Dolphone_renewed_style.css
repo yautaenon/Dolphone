@@ -283,6 +283,7 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
   background-color: var(--md-sys-color-surface-container-highest);
 }
 .exercise .section-item .type-descriptive .answers[data-correct=false] {
+  color: var(--md-sys-color-on-surface);
   background-color: var(--md-sys-color-surface-container-highest);
   border-color: var(--error);
 }
