@@ -282,7 +282,7 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
 }
 
 .exercise .section-item.question-list ul.answers li.answers-choice.answers-selected::before {
-  filter: invert(1) invert(11%) sepia(49%) saturate(4852%) hue-rotate(232deg) brightness(93%) contrast(97%);
+  filter: invert(1) invert(14%) sepia(98%) saturate(2218%) hue-rotate(229deg) brightness(77%) contrast(100%);
 }
 
 .exercise .section-item li.answers-choice {
