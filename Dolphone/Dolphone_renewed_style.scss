@@ -608,10 +608,10 @@ li.evaluation-test a.is-gate-closed::after {
   border-radius: 6px;
   border: solid 2px #333;
   &:hover {
-    background-color: #888;
+    background-color: #999;
   }
   &:active {
-    background-color: #666;
+    background-color: #888;
   }
 }
 .mode-contents-watch > .l-wrapper .p-chapter-show .l-contents.p-chapters-show {
