@@ -691,7 +691,7 @@ li.evaluation-test a.is-gate-closed::after {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--onBackground);
+  background-color: var(--onSurfaceVariant);
   border-radius: 6px;
   border: solid 2px var(--outline);
 }
