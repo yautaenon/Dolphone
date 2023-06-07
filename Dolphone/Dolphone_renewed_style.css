@@ -281,6 +281,10 @@ body > .l-wrapper > .l-contents-wrapper .l-pre-contents {
   border: solid 1px var(--outline);
 }
 
+.exercise .section-item.question-list ul.answers li.answers-choice.answers-selected::before {
+  filter: invert(1) invert(11%) sepia(49%) saturate(4852%) hue-rotate(232deg) brightness(93%) contrast(97%);
+}
+
 .exercise .section-item li.answers-choice {
   border: 1px solid #333;
   background-color: #000;
