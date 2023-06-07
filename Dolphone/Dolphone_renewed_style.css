@@ -672,6 +672,9 @@ li.movie.good {
   border-width: 0 0 1px;
 }
 
+.p-chapter-show .l-column-common.section .u-list li a.is-gate-closed {
+  opacity: 0.38;
+}
 .p-chapter-show .l-column-common.section .u-list li a.is-gate-closed::after {
   background-image: linear-gradient(transparent 0%, transparent 100%);
 }
