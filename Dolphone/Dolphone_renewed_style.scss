@@ -208,11 +208,11 @@ a:visited {
 }
 .u-breadcrumbs > li > a,
 .u-breadcrumbs > li > a:visited {
-  color: #aaa;
+  color: var(--primary);
 }
 .u-breadcrumbs > li.current > a,
 .u-breadcrumbs > li.current:visited {
-  color: #ccc;
+  color: var(--onSurface);
 }
 .u-progress,
 .dlCWCQ,
