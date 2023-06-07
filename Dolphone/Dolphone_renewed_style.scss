@@ -594,7 +594,8 @@ li.movie.good {
 }
 li.essay-test a.is-gate-closed::after,
 li.evaluation-test a.is-gate-closed::after {
-  background-color: #242b42d6;
+  // background-color: #242b42d6;
+  background-color: transparent;
 }
 ::-webkit-scrollbar {
   width: 15px;

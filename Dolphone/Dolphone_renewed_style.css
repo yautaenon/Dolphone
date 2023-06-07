@@ -678,7 +678,7 @@ li.movie.good {
 
 li.essay-test a.is-gate-closed::after,
 li.evaluation-test a.is-gate-closed::after {
-  background-color: rgba(36, 43, 66, 0.8392156863);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar {
