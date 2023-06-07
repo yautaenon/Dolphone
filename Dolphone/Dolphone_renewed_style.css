@@ -228,6 +228,8 @@ a:visited {
 .u-breadcrumbs > li > a,
 .u-breadcrumbs > li > a:visited {
   color: var(--primary);
+  font-family: var(--md-ref-typeface-plain);
+  font-weight: var(--md-ref-typeface-weight-medium);
 }
 
 .u-breadcrumbs > li.current > a,
