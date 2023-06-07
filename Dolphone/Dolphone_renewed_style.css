@@ -673,7 +673,7 @@ li.movie.good {
 }
 
 .p-chapter-show .l-column-common.section .u-list li a.is-gate-closed::after {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6666666667) 0%, rgba(0, 0, 0, 0.6666666667) 100%);
+  background-image: linear-gradient(transparent 0%, transparent 100%);
 }
 
 li.essay-test a.is-gate-closed::after,
