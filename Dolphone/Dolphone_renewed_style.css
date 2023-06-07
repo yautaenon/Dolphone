@@ -683,12 +683,12 @@ li.evaluation-test a.is-gate-closed::after {
 
 ::-webkit-scrollbar {
   width: 15px;
+  outline: var(--outline);
 }
 
 ::-webkit-scrollbar-track {
   background-color: var(--background);
   border-radius: 6px;
-  border-color: var(--outline);
 }
 
 ::-webkit-scrollbar-thumb {
