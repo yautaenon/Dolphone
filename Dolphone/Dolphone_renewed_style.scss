@@ -600,18 +600,19 @@ li.evaluation-test a.is-gate-closed::after {
   width: 15px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #333;
+  background-color: var(--background);
   border-radius: 6px;
+  border-color: var(--outline);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #aaa;
+  background-color: var(--onBackground);
   border-radius: 6px;
-  border: solid 2px #333;
+  border: solid 2px var(--outline);
   &:hover {
-    background-color: #999;
+    background-color: #888;
   }
   &:active {
-    background-color: #888;
+    background-color: #666;
   }
 }
 .mode-contents-watch > .l-wrapper .p-chapter-show .l-contents.p-chapters-show {
