@@ -571,7 +571,8 @@ li.movie.good {
 }
 .p-chapter-show .l-column-common.section .u-list li {
   &:last-child {
-    border-radius: var(--md-sys-shape-corner-medium);
+    border-radius: 0 0 var(--md-sys-shape-corner-medium)
+      var(--md-sys-shape-corner-medium);
     & a.is-gate-closed:after {
       border-radius: 0px 0px var(--md-sys-shape-corner-medium)
         var(--md-sys-shape-corner-medium);
