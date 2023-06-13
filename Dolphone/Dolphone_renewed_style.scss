@@ -556,7 +556,7 @@ div.global--wrapper {
   color: #fff;
 }
 .jmgKZl > :not(:first-child) {
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--md-sys-color-outline);
 }
 .report-notice-body {
   background-color: #222;
