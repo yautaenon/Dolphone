@@ -752,7 +752,7 @@ li.essay-test:has(> a.is-selected),
 li.evaluation-test:has(> a.is-selected),
 li.essay-report:has(> a.is-selected),
 li.evaluation-report:has(> a.is-selected) {
-  background: linear-gradient(90deg, rgba(85, 102, 170, 0.2666666667), rgba(85, 102, 170, 0.8666666667), rgba(85, 102, 170, 0.2666666667));
+  background-image: var(--onBackgroundHover);
 }
 
 @keyframes loading {
