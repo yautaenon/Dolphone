@@ -117,7 +117,6 @@ function videochecker() {
         let video = window.top.document
           .querySelector("iframe")
           .contentDocument.querySelector("#video-player");
-        console.log(video);
         console.log(video.currentTime + "/" + video.duration);
         if (video.duration <= video.currentTime) {
           done();
