@@ -52,7 +52,7 @@ function subscribe() {
         //   .querySelector("#modal-inner-iframe")
         //   .contentDocument.querySelector("#video-player");
         // video.addEventListener("ended", done);
-        videochecker(0);
+        // videochecker(0);
         subsound.play();
         // }
       }, 800);
