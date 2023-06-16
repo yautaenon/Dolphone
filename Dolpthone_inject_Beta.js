@@ -113,21 +113,19 @@ function videochecker() {
       'Selected Item Type is: "' + selectedItemType + '".'
     );
     if (selectedItemType == "movie") {
-      setTimeout(() => {
+      let process = setInterval(() => {
         let video = window.top.document
           .querySelector("iframe")
           .contentDocument.querySelector("#video-player");
-        let process = setInterval(() => {
-          console.log(video);
-          console.log(video.currentTime + "/" + video.duration);
-          if (video.duration <= video.currentTime) {
-            done();
-            libalertimportant("VideoDurationChecker", "process ended.");
-            clearInterval(process);
-          }
-        }, 200);
-        libalertimportant("VideoDurationChecker", "process started.");
-      }, 1000);
+        console.log(video);
+        console.log(video.currentTime + "/" + video.duration);
+        if (video.duration <= video.currentTime) {
+          done();
+          libalertimportant("VideoDurationChecker", "process ended.");
+          clearInterval(process);
+        }
+      }, 200);
+      libalertimportant("VideoDurationChecker", "process started.");
     }
   }, 100);
 }
