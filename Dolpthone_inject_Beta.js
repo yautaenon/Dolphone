@@ -114,7 +114,7 @@ function videochecker() {
     );
     if (selectedItemType == "movie") {
       let video = window.top.document
-        .querySelector("#modal-inner-iframe")
+        .querySelector("iframe")
         .contentDocument.querySelector("#video-player");
       let process = setInterval(() => {
         console.log(e);
