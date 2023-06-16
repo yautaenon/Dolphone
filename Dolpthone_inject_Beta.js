@@ -40,7 +40,7 @@ function subscribe() {
   subsound.load();
   if (document.querySelector("#modal-inner-iframe")) {
     let inneriframeObserver = new MutationObserver((_mutations) => {
-      console.log(_mutations[0]);
+      // console.log(_mutations[0]);
       libalert("InnerIframeObserver", "Successfully detected.");
       setTimeout(() => {
         // if (
@@ -63,7 +63,7 @@ function subscribe() {
   } else {
     let modalObserver = new MutationObserver((mutations) => {
       let inneriframeObserver = new MutationObserver((_mutations) => {
-        console.log(_mutations[0]);
+        // console.log(_mutations[0]);
         libalert("InnerIframeObserver", "Successfully detected.");
         setTimeout(() => {
           // let video = window.top.document
@@ -74,7 +74,7 @@ function subscribe() {
           subsound.play();
         }, 800);
       });
-      console.log(mutations[0]);
+      // console.log(mutations[0]);
       libalert("AppModalObserver", "Successfully detected.");
       inneriframeObserver.observe(
         document.querySelector("#modal-inner-iframe"),
