@@ -117,6 +117,7 @@ function videochecker() {
         .querySelector("#modal-inner-iframe")
         .contentDocument.querySelector("#video-player");
       let process = setInterval(() => {
+        console.log(e);
         console.log(video.currentTime + "/" + video.duration);
         if (video.duration <= video.currentTime) {
           done();
