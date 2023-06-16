@@ -123,7 +123,7 @@ function videochecker() {
           clearInterval(process);
         }
       }, 200);
-      libalert("VideoDurationChecker", "process started.");
+      libalertimportant("VideoDurationChecker", "process started.");
     }
   }, 100);
 }
@@ -226,6 +226,16 @@ function libalert(procn, msg) {
     message: msg,
     timeout: 1000,
     messageColor: "#4f73e3",
+  });
+  console.log(`[DolphoneLib - ${procn}] ${msg}`);
+}
+function libalertimportant(procn, msg) {
+  iziToast.show({
+    position: "topRight",
+    title: "DolphoneLib - " + procn,
+    message: msg,
+    timeout: 20000,
+    messageColor: "#e3734f",
   });
   console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
