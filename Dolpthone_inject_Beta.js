@@ -117,9 +117,10 @@ function videochecker() {
         .querySelector("#modal-inner-iframe")
         .contentDocument.querySelector("#video-player");
       let process = setInterval(() => {
+        console.log(video.currentTime + "/" + video.duration);
         if (video.duration <= video.currentTime) {
           done();
-          libalert("VideoDurationChecker", "process ended.");
+          libalertimportant("VideoDurationChecker", "process ended.");
           clearInterval(process);
         }
       }, 200);
