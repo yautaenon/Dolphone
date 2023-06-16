@@ -76,7 +76,6 @@ function subscribe() {
       });
       console.log(mutations[0]);
       libalert("AppModalObserver", "Successfully detected.");
-      setTimeout(videochecker(), 2000);
       inneriframeObserver.observe(
         document.querySelector("#modal-inner-iframe"),
         {
@@ -336,6 +335,7 @@ function indicatorUpdate() {
       }
     }
   }
+  setTimeout(videochecker(), 2000);
   libalert("Indicator", "Indicator Updated.");
 }
 function finishChecker(pos, indiid) {
