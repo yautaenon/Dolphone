@@ -52,7 +52,7 @@ function subscribe() {
         //   .querySelector("#modal-inner-iframe")
         //   .contentDocument.querySelector("#video-player");
         // video.addEventListener("ended", done);
-        videochecker();
+        videochecker(0);
         subsound.play();
         // }
       }, 800);
@@ -70,7 +70,7 @@ function subscribe() {
           //   .querySelector("#modal-inner-iframe")
           //   .contentDocument.querySelector("#video-player");
           // video.addEventListener("ended", done);
-          videochecker();
+          videochecker(1);
           subsound.play();
         }, 800);
       });
@@ -91,7 +91,7 @@ function subscribe() {
     );
   }
 }
-function videochecker() {
+function videochecker(fromid) {
   setTimeout(() => {
     let renewedStyle = document.createElement("link");
     renewedStyle.rel = "stylesheet";
@@ -123,7 +123,10 @@ function videochecker() {
           clearInterval(process);
         }
       }, 200);
-      libalertimportant("VideoDurationChecker", "process started.");
+      libalertimportant(
+        "VideoDurationChecker",
+        "process started. by process " + fromid
+      );
     }
   }, 100);
 }
@@ -335,7 +338,7 @@ function indicatorUpdate() {
       }
     }
   }
-  setTimeout(videochecker(), 2000);
+  setTimeout(videochecker(2), 2000);
   libalert("Indicator", "Indicator Updated.");
 }
 function finishChecker(pos, indiid) {
