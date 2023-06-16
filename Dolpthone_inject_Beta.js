@@ -70,7 +70,7 @@ function subscribe() {
           //   .querySelector("#modal-inner-iframe")
           //   .contentDocument.querySelector("#video-player");
           // video.addEventListener("ended", done);
-          videochecker(1);
+          // videochecker(1);
           subsound.play();
         }, 800);
       });
