@@ -216,11 +216,16 @@ function veralart(version) {
   let version_sentense = `version ${version} has applied.`;
   iziToast.show({
     position: "bottomRight",
-    title: "Dolpthone",
+    title: "Dolphone",
     message: version_sentense,
     timeout: 5000,
     messageColor: "#00c541",
   });
+  console.log(
+    "%cDolphone%c " + version_sentense,
+    "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;",
+    ""
+  );
 }
 function libalert(procn, msg) {
   iziToast.show({
@@ -230,7 +235,12 @@ function libalert(procn, msg) {
     timeout: 1000,
     messageColor: "#4f73e3",
   });
-  console.log(`[DolphoneLib - ${procn}] ${msg}`);
+  console.log(
+    "%cDolphoneLib - " + procn + "%c " + msg,
+    "color:#000;background-color:#4f73e3;padding:2px 4px;border-radius:4px;",
+    ""
+  );
+  // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function libalertimportant(procn, msg) {
   iziToast.show({
@@ -240,7 +250,12 @@ function libalertimportant(procn, msg) {
     timeout: 20000,
     messageColor: "#e3734f",
   });
-  console.log(`[DolphoneLib - ${procn}] ${msg}`);
+  console.log(
+    "%cDolphoneLib - " + procn + "%c " + msg,
+    "color:#000;background-color:#e3734f;padding:2px 4px;border-radius:4px;",
+    ""
+  );
+  // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function mainalert(msg) {
   iziToast.show({
@@ -250,7 +265,12 @@ function mainalert(msg) {
     timeout: 1000,
     messageColor: "#00c541",
   });
-  console.log(`[Dolphone] ${msg}`);
+  // console.log(`[Dolphone] ${msg}`);
+  console.log(
+    "%cDolphone%c " + msg,
+    "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;",
+    ""
+  );
 }
 function reinject() {
   let p = document.querySelector("script#di");
