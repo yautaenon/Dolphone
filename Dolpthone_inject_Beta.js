@@ -76,7 +76,7 @@ function subscribe() {
       });
       console.log(mutations[0]);
       libalert("AppModalObserver", "Successfully detected.");
-      videochecker();
+      setTimeout(videochecker(), 800);
       inneriframeObserver.observe(
         document.querySelector("#modal-inner-iframe"),
         {
@@ -117,7 +117,7 @@ function videochecker() {
         let video = window.top.document
           .querySelector("iframe")
           .contentDocument.querySelector("#video-player");
-        console.log(video.currentTime + "/" + video.duration);
+        // console.log(video.currentTime + "/" + video.duration);
         if (video.duration <= video.currentTime) {
           done();
           libalertimportant("VideoDurationChecker", "process ended.");
