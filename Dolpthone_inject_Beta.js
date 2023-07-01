@@ -1,40 +1,26 @@
 window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0";
 var window_b9012ye1by98ryn98dy1_Dolpthone_BranchID;
 var dolphoneJS, dolphoneCSS, dolphoneIndicator;
-$.getJSON(
-  "https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5xVi_1DLFOy8Qe-n4nt8dSq84laKWZf3Ey4iUKM/exec?id=" +
-    ProductKey,
-  (data) => {
-    dolphoneJS = data.url;
-    dolphoneCSS = data.css;
-    dolphoneIndicator = data.indicator;
-    window_5209hbf298hew9jfiowg_Dolpthone_version =
-      window_5209hbf298hew9jfiowg_Dolpthone_version + "-" + data.version;
-    if (window_b9012ye1by98ryn98dy1_Dolpthone_BranchID === undefined)
-      window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "1114918";
-    window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
-    // main script
-    subsound = new Audio(
-      "https://aika-toki.github.io/others/library/NotiSound/003_1s.wav"
-    );
-    notifsound = new Audio(
-      "https://aika-toki.github.io/others/library/NotiSound/002_3s.wav"
-    );
-    patchsound = new Audio(
-      "https://aika-toki.github.io/others/library/NotiSound/001_2s.wav"
-    );
-    alertsound = new Audio(
-      "https://aika-toki.github.io/others/library/NotiSound/005_2s.wav"
-    );
-    startup();
-    setTimeout(() => {
-      subscribe();
-      if (!document.querySelector("iframe")) {
-        next();
-      }
-    }, 1000);
-  }
-);
+$.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5xVi_1DLFOy8Qe-n4nt8dSq84laKWZf3Ey4iUKM/exec?id=" + ProductKey, (data) => {
+  dolphoneJS = data.url;
+  dolphoneCSS = data.css;
+  dolphoneIndicator = data.indicator;
+  window_5209hbf298hew9jfiowg_Dolpthone_version = window_5209hbf298hew9jfiowg_Dolpthone_version + "-" + data.version;
+  if (window_b9012ye1by98ryn98dy1_Dolpthone_BranchID === undefined) window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "1114918";
+  window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
+  // main script
+  subsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/003_1s.wav");
+  notifsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/002_3s.wav");
+  patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
+  alertsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/005_2s.wav");
+  startup();
+  setTimeout(() => {
+    subscribe();
+    if (!document.querySelector("iframe")) {
+      next();
+    }
+  }, 1000);
+});
 function subscribe() {
   mainalert("Trying to subscribe.");
   subsound.load();
@@ -71,51 +57,38 @@ function subscribe() {
           //   .contentDocument.querySelector("#video-player");
           // video.addEventListener("ended", done);
           // videochecker(1);
+          styleApply();
           subsound.play();
         }, 800);
       });
       // console.log(mutations[0]);
       libalert("AppModalObserver", "Successfully detected.");
-      inneriframeObserver.observe(
-        document.querySelector("#modal-inner-iframe"),
-        {
-          attributes: true,
-        }
-      );
+      inneriframeObserver.observe(document.querySelector("#modal-inner-iframe"), {
+        attributes: true,
+      });
     });
-    modalObserver.observe(
-      document.querySelector('div[data-react-class="App.Modal"]'),
-      {
-        childList: true,
-      }
-    );
+    modalObserver.observe(document.querySelector('div[data-react-class="App.Modal"]'), {
+      childList: true,
+    });
   }
+}
+function styleApply() {
+  let renewedStyle = document.createElement("link");
+  renewedStyle.rel = "stylesheet";
+  renewedStyle.href = dolphoneCSS;
+  renewedStyle.id = "renewedStyle";
+  window.top.document.querySelector("#modal-inner-iframe").contentDocument.head.appendChild(renewedStyle);
 }
 function videochecker(fromid) {
   setTimeout(() => {
-    let renewedStyle = document.createElement("link");
-    renewedStyle.rel = "stylesheet";
-    renewedStyle.href = dolphoneCSS;
-    renewedStyle.id = "renewedStyle";
-    window.top.document
-      .querySelector("#modal-inner-iframe")
-      .contentDocument.head.appendChild(renewedStyle);
-    let selectedItemType = Array.from(
-      document.querySelector("a.is-selected").parentElement.classList
-    );
-    selectedItemType.includes("good")
-      ? selectedItemType.splice(selectedItemType.indexOf("good"))
-      : selectedItemType;
+    styleApply();
+    let selectedItemType = Array.from(document.querySelector("a.is-selected").parentElement.classList);
+    selectedItemType.includes("good") ? selectedItemType.splice(selectedItemType.indexOf("good")) : selectedItemType;
     selectedItemType = selectedItemType[0];
-    libalert(
-      "SelectedTypeDetecter",
-      'Selected Item Type is: "' + selectedItemType + '".'
-    );
+    libalert("SelectedTypeDetecter", 'Selected Item Type is: "' + selectedItemType + '".');
     if (selectedItemType == "movie") {
       let process = setInterval(() => {
-        let video = window.top.document
-          .querySelector("iframe")
-          .contentDocument.querySelector("#video-player");
+        let video = window.top.document.querySelector("iframe").contentDocument.querySelector("#video-player");
         // console.log(video.currentTime + "/" + video.duration);
         if (video.duration <= video.currentTime) {
           done();
@@ -123,10 +96,7 @@ function videochecker(fromid) {
           clearInterval(process);
         }
       }, 200);
-      libalertimportant(
-        "VideoDurationChecker",
-        "process started. by process " + fromid
-      );
+      libalertimportant("VideoDurationChecker", "process started. by process " + fromid);
     }
   }, 100);
 }
@@ -146,9 +116,7 @@ function done() {
 }
 function next() {
   mainalert("Trying to access next content.");
-  const caps = window.top.document
-    .getElementsByClassName("u-list")[0]
-    .getElementsByTagName("li");
+  const caps = window.top.document.getElementsByClassName("u-list")[0].getElementsByTagName("li");
   let lastIndex = 0;
   for (const item in caps) {
     const cl = caps[item].classList;
@@ -174,14 +142,12 @@ function next() {
 function startup() {
   if (!document.body.classList.contains("izialready")) {
     let swalsc = window.top.document.createElement("script");
-    swalsc.src =
-      "//aika-toki.github.io/others/library/iziToast/iziToast.min.js";
+    swalsc.src = "//aika-toki.github.io/others/library/iziToast/iziToast.min.js";
     swalsc.id = "iziToastScript";
     window.top.document.querySelector("script#di").before(swalsc);
     let swalst = document.createElement("link");
     swalst.rel = "stylesheet";
-    swalst.href =
-      "//aika-toki.github.io/others/library/iziToast/iziToast.min.css";
+    swalst.href = "//aika-toki.github.io/others/library/iziToast/iziToast.min.css";
     swalst.id = "iziToastStyle";
     window.top.document.head.appendChild(swalst);
     let indicatorStyle = document.createElement("link");
@@ -197,8 +163,7 @@ function startup() {
     document.body.classList.add("izialready");
   }
   let version = window_5209hbf298hew9jfiowg_Dolpthone_version;
-  let re =
-    document.querySelector("script#di").className == "reinjected" ? "re" : "";
+  let re = document.querySelector("script#di").className == "reinjected" ? "re" : "";
   console.log("\u001b[33m[Dolpthone]Ver." + version + " " + re + "loaded.");
   if (re == "re") {
     mainalert("reinjected.");
@@ -221,11 +186,7 @@ function veralart(version) {
     timeout: 5000,
     messageColor: "#00c541",
   });
-  console.log(
-    "%cDolphone%c " + version_sentense,
-    "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;",
-    ""
-  );
+  console.log("%cDolphone%c " + version_sentense, "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;", "");
 }
 function libalert(procn, msg) {
   iziToast.show({
@@ -235,11 +196,7 @@ function libalert(procn, msg) {
     timeout: 1000,
     messageColor: "#4f73e3",
   });
-  console.log(
-    "%cDolphoneLib - " + procn + "%c " + msg,
-    "color:#000;background-color:#4f73e3;padding:2px 4px;border-radius:4px;",
-    ""
-  );
+  console.log("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#4f73e3;padding:2px 4px;border-radius:4px;", "");
   // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function libalertimportant(procn, msg) {
@@ -250,11 +207,7 @@ function libalertimportant(procn, msg) {
     timeout: 20000,
     messageColor: "#e3734f",
   });
-  console.log(
-    "%cDolphoneLib - " + procn + "%c " + msg,
-    "color:#000;background-color:#e3734f;padding:2px 4px;border-radius:4px;",
-    ""
-  );
+  console.log("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#e3734f;padding:2px 4px;border-radius:4px;", "");
   // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function mainalert(msg) {
@@ -266,11 +219,7 @@ function mainalert(msg) {
     messageColor: "#00c541",
   });
   // console.log(`[Dolphone] ${msg}`);
-  console.log(
-    "%cDolphone%c " + msg,
-    "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;",
-    ""
-  );
+  console.log("%cDolphone%c " + msg, "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;", "");
 }
 function reinject() {
   let p = document.querySelector("script#di");
@@ -298,14 +247,9 @@ function indicatorsetup() {
     if (nowel !== null) {
       nowel = listel[nowel];
       //nowel.style.background = `linear-gradient(90deg, #ddd 0%,#ddd 100%)`
-      movieel = document
-        .querySelector("iframe")
-        .contentDocument.querySelector("video");
-      let percent =
-        Math.round((movieel.currentTime / movieel.duration) * 1000) / 10;
-      nowel
-        .querySelector("a")
-        .style.setProperty("--movie-progress", `${percent}%`);
+      movieel = document.querySelector("iframe").contentDocument.querySelector("video");
+      let percent = Math.round((movieel.currentTime / movieel.duration) * 1000) / 10;
+      nowel.querySelector("a").style.setProperty("--movie-progress", `${percent}%`);
       //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
       //   document
       //     .querySelector(".progress-circle-color")
@@ -316,23 +260,9 @@ function indicatorsetup() {
 }
 function indicatorUpdate() {
   let listel = document.querySelectorAll("li");
-  if (
-    document
-      .querySelector("div.u-card.has-no-padding")
-      .querySelector(".u-filter")
-  ) {
-    if (
-      !document
-        .querySelector(
-          "#sections-contents > div.l-column-common.section > div.u-card.has-no-padding > div.u-filter > div > div:nth-child(1)"
-        )
-        .classList.contains("u-filter-active")
-    ) {
-      document
-        .querySelector(
-          "#sections-contents > div.l-column-common.section > div.u-card.has-no-padding > div.u-filter > div > div:nth-child(1)"
-        )
-        .click();
+  if (document.querySelector("div.u-card.has-no-padding").querySelector(".u-filter")) {
+    if (!document.querySelector("#sections-contents > div.l-column-common.section > div.u-card.has-no-padding > div.u-filter > div > div:nth-child(1)").classList.contains("u-filter-active")) {
+      document.querySelector("#sections-contents > div.l-column-common.section > div.u-card.has-no-padding > div.u-filter > div > div:nth-child(1)").click();
     }
   }
   for (let i = 0; i < listel.length; i++) {
@@ -341,10 +271,7 @@ function indicatorUpdate() {
       if (lcls.contains("good")) {
         //listel[i].style.backgroundColor = "#9fb";
       }
-    } else if (
-      lcls.contains("evaluation-test") ||
-      lcls.contains("essay-test")
-    ) {
+    } else if (lcls.contains("evaluation-test") || lcls.contains("essay-test")) {
       if (lcls.contains("good")) {
         // listel[i].style.background = "#adbdeb";
       }
@@ -366,9 +293,7 @@ function finishChecker(pos, indiid) {
   renewedStyle.rel = "stylesheet";
   renewedStyle.href = dolphoneCSS;
   renewedStyle.id = "renewedStyle";
-  window.top.document
-    .querySelector("#modal-inner-iframe")
-    .contentDocument.head.appendChild(renewedStyle);
+  window.top.document.querySelector("#modal-inner-iframe").contentDocument.head.appendChild(renewedStyle);
   let listel = document.querySelectorAll("li")[pos];
   let checker = setInterval(() => {
     if (listel.classList.contains("good")) {
