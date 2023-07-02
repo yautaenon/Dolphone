@@ -255,7 +255,8 @@ function veralart(version, patch, re) {
   let version_sentense = `version ${version}-%c${patch.substr(0, 3)}%c${patch.substr(3, 1)}%c${patch.substr(4, 3)}%c has ${re}applied.`;
   let toast_sentense = `version ${version}-${patch.substr(0, 3)}${patch.substr(3, 1)}${patch.substr(4, 3)} has ${re}applied.`;
   let version_color = [patch.substr(0, 6), patch.substr(1, 6)];
-  let version_content_color = [calculateFontColor(version_color[0]), calculateFontColor(version_color[1])];
+  version_color.push(calculateAverageColor(version_color[0], version_color[1]));
+  let version_content_color = [calculateFontColor(version_color[0]), calculateFontColor(version_color[1]), calculateFontColor(version_color[2])];
   iziToast.show({
     position: "bottomRight",
     title: "Dolphone",
@@ -268,7 +269,7 @@ function veralart(version, patch, re) {
     "color:#000;background-image:linear-gradient(90deg,#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;",
     "",
     `color:#${version_content_color[0]};background-color:#${version_color[0]};padding:2px 0 2px 4px;border-radius:10px 0 0 10px;`,
-    `color: #${calculateAverageColor(version_content_color[0], version_content_color[1])};background-image: linear-gradient(90deg,#${version_color[0]},#${version_color[1]});padding: 2px 0 2px 0;`,
+    `color: #${version_content_color[2]})};background-image: linear-gradient(90deg,#${version_color[0]},#${version_color[2]},#${version_color[1]});padding: 2px 0 2px 0;`,
     `color:#${version_content_color[1]};background-color:#${version_color[1]};padding:2px 4px 2px 0;border-radius:0 10px 10px 0;`,
     ""
   );
