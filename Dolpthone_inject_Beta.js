@@ -202,7 +202,7 @@ function veralart(version, re) {
     timeout: 5000,
     messageColor: "#00c541",
   });
-  console.log("%cDolphone%c " + version_sentense, "color:#000;background-image:linear-gradient(#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;", "");
+  console.log("%cDolphone%c " + version_sentense, "color:#000;background-image:linear-gradient(90deg,#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;", "");
 }
 function libalert(procn, msg) {
   iziToast.show({
