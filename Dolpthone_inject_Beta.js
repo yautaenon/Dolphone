@@ -28,8 +28,9 @@ function subscribe() {
   if (document.querySelector("#modal-inner-iframe")) {
     let inneriframeObserver = new MutationObserver((_mutations) => {
       // console.log(_mutations[0]);
-      libalert("InnerIframeObserver", "Successfully detected.");
+      libalert("InnerIframeObserver", "Successfully detected. {Attributes:0}");
       setTimeout(() => {
+        inneriframeObserver.disconnect();
         // if (
         //   window.top.document
         //     .querySelector("#modal-inner-iframe")
@@ -51,7 +52,7 @@ function subscribe() {
     let modalObserver = new MutationObserver((mutations) => {
       let inneriframeObserver = new MutationObserver((_mutations) => {
         // console.log(_mutations[0]);
-        libalert("InnerIframeObserver", "Successfully detected. {Attributes}");
+        libalert("InnerIframeObserver", "Successfully detected. {Attributes:1}");
         setTimeout(() => {
           inneriframeObserver.disconnect();
           // let video = window.top.document
@@ -75,6 +76,7 @@ function subscribe() {
 }
 function styleChecker() {
   let proc = setInterval(() => {
+    if (window.top.document.querySelector("iframe")) return;
     let element = window.top.document.querySelector("iframe").contentDocument;
     element.querySelector("link#renewedStyle") || styleApply(element);
     let iniframe = Array.from(element.querySelectorAll("iframe"));
