@@ -5,8 +5,8 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   dolphoneJS = data.url;
   dolphoneCSS = data.css;
   dolphoneIndicator = data.indicator;
-  window_5209hbf298hew9jfiowg_Dolpthone_version = data.version;
-  if (window_b9012ye1by98ryn98dy1_Dolpthone_BranchID === undefined) window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "1114918";
+  window_5209hbf298hew9jfiowg_Dolpthone_patch = data.version;
+  // if (window_b9012ye1by98ryn98dy1_Dolpthone_BranchID === undefined) window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "1114918";
   window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
   // main script
   subsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/003_1s.wav");
@@ -251,14 +251,15 @@ function calculateAverageColor(color1, color2) {
   }
   return result.join("");
 }
-function veralart(version, re) {
-  let version_sentense = `version %c${version.substr(0, 3)}%c${version.substr(3, 1)}%c${version.substr(4, 3)}%c has ${re}applied.`;
-  let version_color = [version.substr(0, 6), version.substr(1, 6)];
+function veralart(version, patch, re) {
+  let version_sentense = `version ${version}-%c${patch.substr(0, 3)}%c${patch.substr(3, 1)}%c${patch.substr(4, 3)}%c has ${re}applied.`;
+  let toast_sentense = `version ${version}-${patch.substr(0, 3)}${patch.substr(3, 1)}${patch.substr(4, 3)} has ${re}applied.`;
+  let version_color = [patch.substr(0, 6), patch.substr(1, 6)];
   let version_content_color = [calculateFontColor(version_color[0]), calculateFontColor(version_color[1])];
   iziToast.show({
     position: "bottomRight",
     title: "Dolphone",
-    message: version_sentense,
+    message: toast_sentense,
     timeout: 5000,
     messageColor: "#00c541",
   });
