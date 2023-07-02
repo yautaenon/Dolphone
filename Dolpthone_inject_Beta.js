@@ -51,8 +51,9 @@ function subscribe() {
     let modalObserver = new MutationObserver((mutations) => {
       let inneriframeObserver = new MutationObserver((_mutations) => {
         // console.log(_mutations[0]);
-        libalert("InnerIframeObserver", "Successfully detected.");
+        libalert("InnerIframeObserver", "Successfully detected. {Attributes}");
         setTimeout(() => {
+          inneriframeObserver.disconnect();
           // let video = window.top.document
           //   .querySelector("#modal-inner-iframe")
           //   .contentDocument.querySelector("#video-player");
