@@ -76,7 +76,7 @@ function subscribe() {
 }
 function styleChecker() {
   let proc = setInterval(() => {
-    if (window.top.document.querySelector("iframe")) return;
+    // if (!window.top.document.querySelector("iframe")) return;
     let element = window.top.document.querySelector("iframe").contentDocument;
     element.querySelector("link#renewedStyle") || styleApply(element);
     let iniframe = Array.from(element.querySelectorAll("iframe"));
