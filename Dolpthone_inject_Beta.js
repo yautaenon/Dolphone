@@ -14,9 +14,9 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
   alertsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/005_2s.wav");
   startup();
-  styleChecker();
   setTimeout(() => {
     subscribe();
+    styleChecker();
     if (!document.querySelector("iframe")) {
       next();
     }
