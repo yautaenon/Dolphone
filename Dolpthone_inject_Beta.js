@@ -97,7 +97,7 @@ function styleApply(element) {
 }
 function videochecker(fromid) {
   setTimeout(() => {
-    styleApply();
+    // styleApply();
     let selectedItemType = Array.from(document.querySelector("a.is-selected").parentElement.classList);
     selectedItemType.includes("good") ? selectedItemType.splice(selectedItemType.indexOf("good")) : selectedItemType;
     selectedItemType = selectedItemType[0];
