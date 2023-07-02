@@ -117,16 +117,16 @@ function videochecker(fromid) {
   }, 100);
 }
 function done() {
-  console.log("DONE!");
+  // console.log("DONE!");
   mainalert("Content ended.");
   setTimeout(() => {
     next();
-    console.log("Next");
+    // console.log("Next");
   }, 1000);
   let sub = setTimeout(() => {
     reinject();
     // subscribe();
-    console.log("Subscribe");
+    mainalert("Subscribe");
     clearTimeout(sub);
   }, 10000);
 }
