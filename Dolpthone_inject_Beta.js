@@ -180,7 +180,7 @@ function startup() {
   }
   let version = window_5209hbf298hew9jfiowg_Dolpthone_version;
   let re = document.querySelector("script#di").className == "reinjected" ? "re" : "";
-  console.log("\u001b[33m[Dolpthone]Ver." + version + " " + re + "loaded.");
+  //console.log("\u001b[33m[Dolpthone]Ver." + version + " " + re + "loaded.");
   if (re == "re") {
     mainalert("reinjected.");
   }
@@ -188,13 +188,13 @@ function startup() {
   if (window.top.document.querySelector("script#di").className == "") {
     setTimeout(() => {
       patchsound.play();
-      window.top.veralart(version);
+      window.top.veralart(version, re);
       window.top.indicatorsetup();
     }, 1000);
   }
 }
-function veralart(version) {
-  let version_sentense = `version ${version} has applied.`;
+function veralart(version, re) {
+  let version_sentense = `version ${version} has ${re}applied.`;
   iziToast.show({
     position: "bottomRight",
     title: "Dolphone",
@@ -202,7 +202,7 @@ function veralart(version) {
     timeout: 5000,
     messageColor: "#00c541",
   });
-  console.log("%cDolphone%c " + version_sentense, "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;", "");
+  console.log("%cDolphone%c " + version_sentense, "color:#000;background-image:linear-gradient(#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;", "");
 }
 function libalert(procn, msg) {
   iziToast.show({
