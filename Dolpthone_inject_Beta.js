@@ -14,6 +14,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
   alertsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/005_2s.wav");
   startup();
+  styleChecker();
   setTimeout(() => {
     subscribe();
     if (!document.querySelector("iframe")) {
@@ -57,7 +58,6 @@ function subscribe() {
           //   .contentDocument.querySelector("#video-player");
           // video.addEventListener("ended", done);
           // videochecker(1);
-          styleApply();
           subsound.play();
         }, 800);
       });
@@ -72,12 +72,25 @@ function subscribe() {
     });
   }
 }
-function styleApply() {
+function styleChecker() {
+  let proc = setInterval(() => {
+    let element = window.top.document.querySelector("iframe").contentDocument;
+    element.querySelector("link#renewedStyle") || styleApply(element);
+    let iniframe = Array.from(element.querySelectorAll("iframe"));
+    if (iniframe)
+      iniframe.forEach((e) => {
+        e.contentDocument.querySelector("link#renewedStyle") || styleApply(e.contentDocument);
+      });
+  }, 1000);
+  libalert("StyleChecker", `Process started and observing nodes. id: ${proc}`);
+  return proc;
+}
+function styleApply(element) {
   let renewedStyle = document.createElement("link");
   renewedStyle.rel = "stylesheet";
   renewedStyle.href = dolphoneCSS;
   renewedStyle.id = "renewedStyle";
-  window.top.document.querySelector("#modal-inner-iframe").contentDocument.head.appendChild(renewedStyle);
+  element.head.appendChild(renewedStyle);
 }
 function videochecker(fromid) {
   setTimeout(() => {
