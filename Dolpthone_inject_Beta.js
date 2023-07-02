@@ -193,8 +193,68 @@ function startup() {
     }, 1000);
   }
 }
+function calculateFontColor(colorstr) {
+  const bgColor = {
+    red: parseInt(colorstr.substr(0, 2), 16),
+    green: parseInt(colorstr.substr(2, 2), 16),
+    blue: parseInt(colorstr.substr(4, 2), 16),
+  };
+
+  const getRGBForCalculateLuminance = (_color) => {
+    const color = _color / 255;
+    if (color <= 0.03928) {
+      return color / 12.92;
+    } else {
+      return Math.pow((color + 0.055) / 1.055, 2.4);
+    }
+  };
+
+  const getRelativeLuminance = (color) => {
+    const { red, green, blue } = color;
+    let R = getRGBForCalculateLuminance(red);
+    let G = getRGBForCalculateLuminance(green);
+    let B = getRGBForCalculateLuminance(blue);
+    return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+  };
+
+  const getContrastRatio = (color1, color2) => {
+    const luminance1 = getRelativeLuminance(color1);
+    const luminance2 = getRelativeLuminance(color2);
+    const bright = Math.max(luminance1, luminance2);
+    const dark = Math.min(luminance1, luminance2);
+    return (bright + 0.05) / (dark + 0.05);
+  };
+
+  const getFontColor = (color) => {
+    const BLACK = { red: 0, green: 0, blue: 0 };
+    const WHITE = { red: 255, green: 255, blue: 255 };
+    const whiteRatio = getContrastRatio(color, WHITE);
+    const blackRatio = getContrastRatio(color, BLACK);
+    return whiteRatio > blackRatio ? WHITE : BLACK;
+  };
+
+  const toHexColor = ({ red, green, blue }) => [`0${Number(red).toString(16)}`.slice(-2), `0${Number(green).toString(16)}`.slice(-2), `0${Number(blue).toString(16)}`.slice(-2)].join("");
+  const fontColor = getFontColor(bgColor);
+
+  return toHexColor(fontColor);
+}
+function calculateAverageColor(color1, color2) {
+  color1 = [parseInt(color1.substr(0, 2), 16), parseInt(color1.substr(2, 2), 16), parseInt(color1.substr(4, 2), 16)];
+  color2 = [parseInt(color2.substr(0, 2), 16), parseInt(color2.substr(2, 2), 16), parseInt(color2.substr(4, 2), 16)];
+  let result = [];
+  for (let i = 0; i < 3; i++) {
+    result.push(
+      Number(Math.round((color1[i] + color2[i]) / 2))
+        .toString(16)
+        .padStart(2, "0")
+    );
+  }
+  return result.join("");
+}
 function veralart(version, re) {
-  let version_sentense = `version ${version} has ${re}applied.`;
+  let version_sentense = `version %c${version.substr(0, 3)}%c${version.substr(3, 1)}%c${version.substr(4, 3)}%c has ${re}applied.`;
+  let version_color = [version.substr(0, 6), version.substr(1, 6)];
+  let version_content_color = [calculateFontColor(version_color[0]), calculateFontColor(version_color[1])];
   iziToast.show({
     position: "bottomRight",
     title: "Dolphone",
@@ -202,7 +262,15 @@ function veralart(version, re) {
     timeout: 5000,
     messageColor: "#00c541",
   });
-  console.log("%cDolphone%c " + version_sentense, "color:#000;background-image:linear-gradient(90deg,#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;", "");
+  console.log(
+    "%cDolphone%c " + version_sentense,
+    "color:#000;background-image:linear-gradient(90deg,#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;",
+    "",
+    `color:#${version_content_color[0]};background-color:#${version_color[0]};padding:2px 0 2px 4px;border-radius:10px 0 0 10px;`,
+    `color: #${calculateAverageColor(version_content_color[0], version_content_color[1])};background-image: linear-gradient(90deg,#${version_color[0]},#${version_color[1]});padding: 2px 0 2px 0;`,
+    `color:#${version_content_color[1]};background-color:#${version_color[1]};padding:2px 4px 2px 0;border-radius:0 10px 10px 0;`,
+    ""
+  );
 }
 function libalert(procn, msg) {
   iziToast.show({
