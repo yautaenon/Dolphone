@@ -95,9 +95,7 @@
   --md-sys-typescale-headline-small-line-height: 32px;
   --md-sys-typescale-headline-small-size: 24px;
   --md-sys-typescale-headline-small-tracking: 0px;
-  --md-sys-typescale-headline-small-weight: var(
-    --md-ref-typeface-weight-regular
-  );
+  --md-sys-typescale-headline-small-weight: var(--md-ref-typeface-weight-regular);
   --md-sys-shape-corner-none: 0px;
   --md-sys-shape-corner-extra-small: 4px;
   --md-sys-shape-corner-small: 8px;
@@ -716,11 +714,11 @@ li.evaluation-test a.is-gate-closed::after {
 }
 
 li.movie > a.is-selected {
-  background: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), rgb(0, 0, 0) var(--movie-progress), rgb(0, 0, 0) 100%);
+  background: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), transparent var(--movie-progress), transparent 100%);
   background: #000;
   border-bottom: solid 5px #000 !important;
-  -o-border-image: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), rgb(0, 0, 0) var(--movie-progress), rgb(0, 0, 0) 100%);
-     border-image: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), rgb(0, 0, 0) var(--movie-progress), rgb(0, 0, 0) 100%);
+  -o-border-image: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), transparent var(--movie-progress), transparent 100%);
+     border-image: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), transparent var(--movie-progress), transparent 100%);
   border-image-slice: 1;
 }
 
