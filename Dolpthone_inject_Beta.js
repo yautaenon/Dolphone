@@ -188,7 +188,7 @@ function startup() {
   if (window.top.document.querySelector("script#di").className == "") {
     setTimeout(() => {
       patchsound.play();
-      window.top.veralart(version, re);
+      window.top.veralart(version, window_5209hbf298hew9jfiowg_Dolpthone_patch, re);
       window.top.indicatorsetup();
     }, 1000);
   }
