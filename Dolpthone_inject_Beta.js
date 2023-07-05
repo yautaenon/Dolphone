@@ -386,7 +386,7 @@ function finishChecker(pos, indiid) {
       clearInterval(indiid);
       clearInterval(checker);
       libalert("TestCorrectChecker", "process ended.");
-      listel.classList.remove("now");
+      if (listel.classList.contains("now")) listel.classList.remove("now");
       setTimeout(() => {
         done();
       }, 5000);
