@@ -600,10 +600,10 @@ li.evaluation-test a.is-gate-closed::after {
   overflow-y: scroll;
 }
 li.movie > a.is-selected {
-  background: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), transparent var(--movie-progress), transparent 100%);
+  background: linear-gradient(90deg, var(--tertiary) 0%, var(--tertiary) var(--movie-progress), transparent var(--movie-progress), transparent 100%);
   background: #000;
   border-bottom: solid 5px #000 !important;
-  border-image: linear-gradient(90deg, #082 0%, #082 var(--movie-progress), transparent var(--movie-progress), transparent 100%);
+  border-image: linear-gradient(90deg, var(--tertiary) 0%, var(--tertiary) var(--movie-progress), transparent var(--movie-progress), transparent 100%);
   border-image-slice: 1;
 }
 li.movie:has(> a.is-selected),
