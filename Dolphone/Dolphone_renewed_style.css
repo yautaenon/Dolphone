@@ -734,6 +734,14 @@ li.evaluation-test > a,
 li.essay-test > a {
   border-left: 3px solid var(--secondary);
 }
+li.evaluation-test > a:last-child,
+li.essay-test > a:last-child {
+  border-radius: 0 0 0 var(--md-sys-shape-corner-medium);
+}
+
+.p-chapter-show .l-column-common.section .u-list li:not(:last-child) {
+  margin-bottom: 5px;
+}
 
 .mode-contents-watch > .l-wrapper .p-chapter-show .l-contents.p-chapters-show .l-column-common.section .u-list li a.is-selected {
   border-right: solid 0px rgba(0, 0, 0, 0) !important;
