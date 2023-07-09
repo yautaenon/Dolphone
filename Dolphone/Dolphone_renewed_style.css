@@ -756,6 +756,10 @@ li.essay-test.good {
   border-bottom: solid 5px var(--secondary) !important;
 }
 
+li.good {
+  transition: border-width 150ms ease-in-out;
+}
+
 li.essay-test.now,
 li.evaluation-test.now {
   background: linear-gradient(90deg, rgba(85, 102, 170, 0.2666666667), rgba(85, 102, 170, 0.8666666667), rgba(85, 102, 170, 0.2666666667));

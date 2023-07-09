@@ -634,6 +634,9 @@ li.essay-test.good {
   background: var(--md-sys-color-surface-container-highest);
   border-bottom: solid 5px var(--secondary) !important;
 }
+li.good {
+  transition: border-width 150ms ease-in-out;
+}
 li.essay-test.now,
 li.evaluation-test.now {
   background: linear-gradient(90deg, #56a4, #56ad, #56a4);
