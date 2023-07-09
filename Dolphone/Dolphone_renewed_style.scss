@@ -616,9 +616,10 @@ li.essay-report:has(> a.is-selected) {
 li.evaluation-test > a,
 li.essay-test > a {
   border-left: 3px solid var(--secondary);
-  &:last-child {
-    border-radius: 0 0 0 var(--md-sys-shape-corner-medium);
-  }
+}
+li.evaluation-test:last-child > a,
+li.essay-test:last-child > a {
+  border-radius: 0 0 0 var(--md-sys-shape-corner-medium);
 }
 .p-chapter-show .l-column-common.section .u-list li:not(:last-child) {
   margin-bottom: 5px;

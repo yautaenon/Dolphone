@@ -734,8 +734,9 @@ li.evaluation-test > a,
 li.essay-test > a {
   border-left: 3px solid var(--secondary);
 }
-li.evaluation-test > a:last-child,
-li.essay-test > a:last-child {
+
+li.evaluation-test:last-child > a,
+li.essay-test:last-child > a {
   border-radius: 0 0 0 var(--md-sys-shape-corner-medium);
 }
 
