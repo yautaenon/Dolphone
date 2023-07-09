@@ -672,7 +672,7 @@ li.movie.good {
 
 .u-list.has-linked-children > li {
   border: solid 1px var(--outline);
-  border-width: 0 0 1px;
+  border-width: 1px 0 1px;
 }
 
 .p-chapter-show .l-column-common.section .u-list li:has(a.is-gate-closed) {
