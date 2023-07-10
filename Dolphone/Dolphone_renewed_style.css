@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap");
 @media (prefers-color-scheme: light) {
   :root {
@@ -817,4 +818,8 @@ ul.u-list a {
   font-weight: var(--md-sys-typescale-body-medium-weight);
   letter-spacing: var(--md-sys-typescale-body-medium-tracking);
   color: var(--md-sys-color-on-surface-variant);
+}
+
+.icon-close::before {
+  content: "✕";
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
