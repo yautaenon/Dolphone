@@ -366,7 +366,7 @@ function indicatorUpdate() {
         alertsound.load();
         let alertnot = setInterval(() => {
           alertsound.play();
-        }, 1700);
+        }, 1000);
         finishChecker(i, alertnot);
       }
     }
