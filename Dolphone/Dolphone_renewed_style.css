@@ -156,7 +156,7 @@ textarea {
 
 a,
 a:hover,
-a:visited {
+a:active {
   color: var(--primary);
 }
 
