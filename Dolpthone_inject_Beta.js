@@ -25,6 +25,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
 function subscribe() {
   mainalert("Trying to subscribe.");
   subsound.load();
+  subsound.volume = 0.2;
   if (document.querySelector("#modal-inner-iframe")) {
     let inneriframeObserver = new MutationObserver((_mutations) => {
       // console.log(_mutations[0]);
@@ -141,6 +142,7 @@ function next() {
         break;
       } else if (cl.contains("evaluation-test") || cl.contains("essay-test")) {
         notifsound.load();
+        notifsound.volume = 0.2;
         notifsound.play();
         notifsound.addEventListener("ended", () => {
           notifsound = "";
@@ -185,6 +187,7 @@ function startup() {
     mainalert("reinjected.");
   }
   patchsound.load();
+  patchsound.volume = 0.2;
   if (window.top.document.querySelector("script#di").className == "") {
     setTimeout(() => {
       patchsound.play();
@@ -364,6 +367,7 @@ function indicatorUpdate() {
       if (listel[i].querySelector("a").classList.contains("is-selected")) {
         listel[i].classList.add("now");
         alertsound.load();
+        alertsound.volume = 0.2;
         let alertnot = setInterval(() => {
           alertsound.play();
         }, 10000);
