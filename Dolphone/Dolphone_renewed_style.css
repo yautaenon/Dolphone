@@ -3,6 +3,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --primary: #4d57a9;
+    --primaryFilter: brightness(0) invert(34%) sepia(60%) saturate(614%) hue-rotate(196deg) brightness(90%) contrast(91%);
     --primaryHover: #4d57a913;
     --onPrimary: #ffffff;
     --onPrimaryHover: #ffffff13;
@@ -40,6 +41,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --primary: #bcc2ff;
+    --primaryFilter: brightness(0) invert(71%) sepia(18%) saturate(585%) hue-rotate(198deg) brightness(103%) contrast(107%);
     --primaryHover: #bcc2ff13;
     --onPrimary: #1b2678;
     --onPrimaryHover: #1b267813;
@@ -928,4 +930,8 @@ ul.u-list a {
 
 .cOaepU {
   color: var(--primary);
+}
+
+#root > div > div.sc-aXZVg.sc-75zdym-0.dKubqp.eOtwIT > div.sc-aXZVg.sc-t0ugq4-0.dKubqp.ybHqr > div > a > div > div.sc-aXZVg.dKubqp > img {
+  filter: var(--primaryFilter);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
