@@ -829,5 +829,10 @@ ul.u-list a {
 }
 
 .hAJjgm {
+  color: var(--primary);
+  border-bottom: solid 2px var(--primary);
+}
+
+.inZtuJ {
   color: var(--onSurface);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
