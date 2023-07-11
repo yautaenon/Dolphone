@@ -852,7 +852,8 @@ ul.u-list a {
   box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 2px;
 }
 
-.gdDzte {
+.gdDzte,
+.l-header .u-global-navigation > .ny-ci > a {
   filter: invert(1) hue-rotate(180deg);
 }
 
@@ -860,11 +861,13 @@ ul.u-list a {
 .hknvTK,
 .VEJWE:last-child > :link,
 .VEJWE:last-child > :hover,
-.VEJWE:last-child > :visited {
+.VEJWE:last-child > :visited,
+.l-header .u-global-navigation > .u-global-navigation-pages li.nav > a {
   color: var(--onBackground);
 }
 
-.hknvTK::after {
+.hknvTK::after,
+.l-header .u-global-navigation > .u-global-navigation-pages li.nav > a:after {
   background-color: var(--primary);
 }
 
@@ -929,11 +932,13 @@ ul.u-list a {
   background-color: var(--onSurfaceHover);
 }
 
-.cOaepU {
+.cOaepU,
+.l-header .u-global-navigation > .u-global-navigation-pages li.event-calendar > a {
   color: var(--primary);
 }
 
-#root > div > div.sc-aXZVg.sc-75zdym-0.dKubqp.eOtwIT > div.sc-aXZVg.sc-t0ugq4-0.dKubqp.ybHqr > div > a > div > div.sc-aXZVg.dKubqp > img {
+#root > div > div.sc-aXZVg.sc-75zdym-0.dKubqp.eOtwIT > div.sc-aXZVg.sc-t0ugq4-0.dKubqp.ybHqr > div > a > div > div.sc-aXZVg.dKubqp > img,
+.l-header .u-global-navigation > .u-global-navigation-pages li.event-calendar > a > img {
   filter: var(--primaryFilter);
 }
 
