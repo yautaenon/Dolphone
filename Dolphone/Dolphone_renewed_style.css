@@ -921,6 +921,5 @@ ul.u-list a {
 }
 
 .evJGlU:hover {
-  background-color: var(--md-sys-color-surface-container-highest);
-  background-image: linear-gradient(var(--onSurfaceHover), var(--onSurfaceHover));
+  background-color: var(--onSurfaceHover);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
