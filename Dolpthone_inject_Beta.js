@@ -113,6 +113,12 @@ function videochecker(fromid) {
           clearInterval(process);
         }
       }, 200);
+      setTimeout(() => {
+        let video = window.top.document.querySelector("iframe").contentDocument.querySelector("#video-player");
+        if (video.paused) {
+          video.play();
+        }
+      }, 5000);
       libalertimportant("VideoDurationChecker", "process started. by process " + fromid);
     }
   }, 100);
