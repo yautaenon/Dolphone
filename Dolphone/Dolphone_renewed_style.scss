@@ -35,6 +35,7 @@
     --md-sys-color-surface-container: #f0edf1;
     --md-sys-color-surface-container-low: #f6f2f7;
     --md-sys-color-surface-container-lowest: #ffffff;
+    --normaly-darker-filter: invert(0);
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -74,6 +75,7 @@
     --md-sys-color-surface-container-low: #1b1b1f;
     --md-sys-color-surface-container-lowest: #0e0e11;
     --md-sys-color-shadow: #000;
+    --normaly-darker-filter: invert(1) hue-rotate(180deg);
   }
 }
 :root {
@@ -719,7 +721,7 @@ ul.u-list a {
 }
 .gdDzte,
 .l-header .u-global-navigation > .ny-ci > a {
-  filter: invert(1) hue-rotate(180deg);
+  filter: var(--normaly-darker-filter);
 }
 .kNySZL,
 .hknvTK,
