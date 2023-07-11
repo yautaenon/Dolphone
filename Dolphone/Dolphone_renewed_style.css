@@ -944,4 +944,8 @@ ul.u-list a {
 
 .lbRpAk {
   border: 1px solid var(--outline);
+}
+
+.lbRpAk:hover {
+  background-color: var(--onSurfaceHover);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
