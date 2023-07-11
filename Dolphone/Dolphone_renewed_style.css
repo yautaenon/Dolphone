@@ -112,7 +112,7 @@
   --md-sys-shape-corner-medium: 12px;
   --md-sys-shape-corner-large: 16px;
   --md-sys-shape-corner-extra-large: 28px;
-  --md-sys-shape-corner-full: 50%;
+  --md-sys-shape-corner-full: 9999px;
   --textarea-width-outline: 1px;
   --md-sys-elevation-level0: 0px;
   --md-sys-elevation-level1: 1px;
