@@ -891,4 +891,24 @@ ul.u-list a {
 .jdHFhn {
   background-color: var(--md-sys-color-surface-container-highest);
   color: var(--onSurface);
+}
+
+.bIeKIR {
+  color: var(--onSurface);
+}
+
+.kwUDW {
+  color: var(--onSurfaceVariant);
+}
+
+.fdRxUg > :not(:first-child) {
+  border-top: 1px solid var(--outline);
+}
+
+.ZJMmE {
+  background-color: var(--md-sys-color-surface-container-highest);
+}
+
+.fjiCMT {
+  background-color: var(--tertiary);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
