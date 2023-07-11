@@ -835,4 +835,21 @@ ul.u-list a {
 
 .inZtuJ {
   color: var(--onSurface);
+}
+
+.ybHqr {
+  background-color: var(--background);
+  box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 2px;
+}
+
+.gdDzte {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.kNySZL {
+  color: var(--onBackground);
+}
+
+.hknvTK::after {
+  background-color: var(--primary);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
