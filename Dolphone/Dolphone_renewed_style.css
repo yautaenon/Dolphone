@@ -934,4 +934,14 @@ ul.u-list a {
 
 #root > div > div.sc-aXZVg.sc-75zdym-0.dKubqp.eOtwIT > div.sc-aXZVg.sc-t0ugq4-0.dKubqp.ybHqr > div > a > div > div.sc-aXZVg.dKubqp > img {
   filter: var(--primaryFilter);
+}
+
+.klVKWm {
+  background-color: var(--background);
+  color: var(--primary);
+  border-radius: var(--md-sys-shape-corner-full);
+}
+
+.lbRpAk {
+  border: 1px solid var(--outline);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
