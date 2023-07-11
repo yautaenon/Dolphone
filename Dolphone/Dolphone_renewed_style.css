@@ -860,11 +860,13 @@ ul.u-list a {
 
 .gXHlTJ {
   background-color: var(--background);
+  border: 1px var(--outline) solid;
   border-radius: var(--md-sys-shape-corner-medium);
 }
 
 .gITOFJ {
   background-color: var(--background);
+  border: 1px var(--outline) solid;
 }
 
 .VEJWE:not(:first-child)::before {
