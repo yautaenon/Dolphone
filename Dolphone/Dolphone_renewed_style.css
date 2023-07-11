@@ -847,10 +847,35 @@ ul.u-list a {
 }
 
 .kNySZL,
-.hknvTK {
+.hknvTK,
+.VEJWE:last-child > :link,
+.VEJWE:last-child > :hover,
+.VEJWE:last-child > :visited {
   color: var(--onBackground);
 }
 
 .hknvTK::after {
   background-color: var(--primary);
+}
+
+.gXHlTJ {
+  background-color: var(--background);
+  border-radius: var(--md-sys-shape-corner-medium);
+}
+
+.gITOFJ {
+  background-color: var(--background);
+}
+
+.VEJWE:not(:first-child)::before {
+  background-color: var(--onBackground);
+}
+
+.eCJxrg {
+  color: var(--surfaceVariant);
+}
+
+.eCJxrg:hover,
+.eCJxrg:visited {
+  color: var(--onSurfaceVariant);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
