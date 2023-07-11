@@ -367,8 +367,8 @@ function indicatorUpdate() {
       if (listel[i].querySelector("a").classList.contains("is-selected")) {
         listel[i].classList.add("now");
         alertsound.load();
-        alertsound.volume = 0.2;
         let alertnot = setInterval(() => {
+          alertsound.volume = 0.2;
           alertsound.play();
         }, 10000);
         finishChecker(i, alertnot);
