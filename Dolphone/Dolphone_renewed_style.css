@@ -948,4 +948,10 @@ ul.u-list a {
 
 .lbRpAk:hover {
   background-color: var(--onSurfaceHover);
+}
+
+.lbRpAk:hover,
+.lbRpAk:active {
+  border: 1px solid var(--outline);
+  color: var(--primary);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
