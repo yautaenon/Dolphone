@@ -866,7 +866,7 @@ ul.u-list a {
 
 .gITOFJ {
   background-color: var(--background);
-  border: 1px var(--outline) solid;
+  border: 1px 0px var(--outline) solid;
 }
 
 .VEJWE:not(:first-child)::before {
