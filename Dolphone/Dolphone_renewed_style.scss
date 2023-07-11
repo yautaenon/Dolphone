@@ -678,6 +678,9 @@ li.evaluation-report:has(> a.is-selected) {
 body.evaluation-test .wrapper .container header h1.resource-title::before {
   filter: invert(1) hue-rotate(187deg) brightness(1.55);
 }
+#index > div.global--wrapper.js-wrapping-whole-elements > div {
+  filter: invert(1) hue-rotate(180deg) brightness(0.8);
+}
 ul.u-list a {
   filter: none;
 }
