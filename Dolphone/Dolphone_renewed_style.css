@@ -851,7 +851,7 @@ ul.u-list a {
 .ybHqr,
 .l-header .u-global-navigation {
   background-color: var(--background);
-  box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 2px;
+  box-shadow: var(--onSurfaceHover) 0px 2px 2px;
 }
 
 .gdDzte,
