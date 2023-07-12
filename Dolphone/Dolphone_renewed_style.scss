@@ -884,4 +884,11 @@ ul.u-list a {
   background-color: var(--md-sys-color-surface-container-low);
   color: var(--error);
   box-shadow: 0px 0px var(--md-sys-elevation-level1) var(--md-sys-elevation-level1) var(--md-sys-color-shadow);
+  font-family: var(--md-ref-typeface-plain);
+  font-weight: var(--md-ref-typeface-weight-medium);
+  &:hover {
+    filter: none;
+    background-color: var(--primaryHover);
+    box-shadow: 0px 0px var(--md-sys-elevation-level2) var(--md-sys-elevation-level2) var(--md-sys-color-shadow);
+  }
 }
