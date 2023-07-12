@@ -975,9 +975,10 @@ ul.u-list a {
 }
 
 .klVKWm {
-  background-color: var(--background);
+  background-color: inherit;
   color: var(--primary);
   border-radius: var(--md-sys-shape-corner-full);
+  border-color: var(--outline);
 }
 
 .lbRpAk {

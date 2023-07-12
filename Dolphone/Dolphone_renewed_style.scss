@@ -817,9 +817,10 @@ ul.u-list a {
   filter: var(--primaryFilter);
 }
 .klVKWm {
-  background-color: var(--background);
+  background-color: inherit;
   color: var(--primary);
   border-radius: var(--md-sys-shape-corner-full);
+  border-color: var(--outline);
 }
 .lbRpAk {
   border: 1px solid var(--outline);
