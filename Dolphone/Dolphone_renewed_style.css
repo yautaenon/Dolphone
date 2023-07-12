@@ -75,7 +75,9 @@
     --md-sys-color-surface-container: #1f1f23;
     --md-sys-color-surface-container-low: #1b1b1f;
     --md-sys-color-surface-container-lowest: #0e0e11;
-    --md-sys-color-shadow: #000;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-shadow-key: #0000004d;
+    --md-sys-color-shadow-ambient: #00000026;
     --normaly-darker-filter: invert(1) hue-rotate(180deg);
   }
 }
@@ -117,7 +119,7 @@
   --md-sys-shape-corner-full: 9999px;
   --textarea-width-outline: 1px;
   --md-sys-elevation-level0: 0px;
-  --md-sys-elevation-level1: 1px;
+  --md-sys-elevation-level1: 0px 1px 2px 0px var(--md-sys-color-shadow-key), 0px 1px 3px 1px var(--md-sys-color-shadow-ambient);
   --md-sys-elevation-level2: 3px;
   --md-sys-elevation-level3: 6px;
   --md-sys-elevation-level4: 8px;
@@ -1056,7 +1058,7 @@ ul.u-list a {
   border-radius: var(--md-sys-shape-corner-full);
   background-color: var(--md-sys-color-surface-container-low);
   color: var(--error);
-  box-shadow: 0px 0px var(--md-sys-elevation-level1) var(--md-sys-elevation-level1) var(--md-sys-color-shadow);
+  box-shadow: var(--md-sys-elevation-level1);
   font-family: var(--md-ref-typeface-plain);
   font-weight: var(--md-ref-typeface-weight-medium);
 }
