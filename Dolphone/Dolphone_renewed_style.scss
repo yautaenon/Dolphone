@@ -842,3 +842,9 @@ ul.u-list a {
 .hqpSjF {
   filter: var(--normaly-darker-filter);
 }
+.dJqELK {
+  color: var(--primary);
+}
+.dJqELK::after {
+  background-color: var(--primary);
+}
