@@ -36,6 +36,9 @@
     --md-sys-color-surface-container: #f0edf1;
     --md-sys-color-surface-container-low: #f6f2f7;
     --md-sys-color-surface-container-lowest: #ffffff;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-shadow-key: #0000004d;
+    --md-sys-color-shadow-ambient: #00000026;
     --normaly-darker-filter: invert(0);
   }
 }
