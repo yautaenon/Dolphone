@@ -954,7 +954,8 @@ ul.u-list a {
   border: 1px solid var(--outline);
 }
 
-.lbRpAk:hover {
+.lbRpAk:hover,
+.fupcGo:hover {
   background-color: var(--onSurfaceHover);
 }
 
