@@ -917,7 +917,7 @@ ul.u-list a {
 }
 
 .jdHFhn:last-child {
-  border-radius: var(--md-sys-shape-corner-medium);
+  border-radius: 0 0 var(--md-sys-shape-corner-medium) 0;
 }
 
 .bIeKIR,
