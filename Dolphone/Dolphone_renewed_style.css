@@ -968,4 +968,9 @@ ul.u-list a {
 
 .kGratX:hover {
   border-radius: 0 0 var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium);
+}
+
+.hfRabK {
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--onSurface);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
