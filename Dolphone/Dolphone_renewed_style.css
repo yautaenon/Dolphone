@@ -476,10 +476,12 @@ div.global--wrapper {
 }
 
 .u-button.type-primary-light {
-  border: solid 1px var(--primary);
-  background-color: #000;
+  border: solid 1px var(--outline);
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: inherit;
   color: var(--primary);
-  font-weight: 900;
+  font-weight: 500;
+  font-family: var(--md-ref-typeface-plain);
 }
 
 .u-button.type-primary-light:hover {
