@@ -916,6 +916,10 @@ ul.u-list a {
   color: var(--onSurface);
 }
 
+.jdHFhn:last-child {
+  border-radius: var(--md-sys-shape-corner-medium);
+}
+
 .bIeKIR,
 .gGOtha,
 .cIWMkX {
