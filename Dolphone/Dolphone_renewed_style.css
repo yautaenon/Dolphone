@@ -969,7 +969,8 @@ ul.u-list a {
   color: var(--primary);
 }
 
-.kGratX:hover {
+.kGratX:hover,
+.l-header .u-global-navigation > .u-global-navigation-pages li.u-global-navigation-account-menu > ul li.setting > .menu .menu-items li:last-child a:hover {
   border-radius: 0 0 var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium);
 }
 
