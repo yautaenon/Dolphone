@@ -883,5 +883,5 @@ ul.u-list a {
   border-radius: var(--md-sys-shape-corner-full);
   background-color: var(--md-sys-color-surface-container-low);
   color: var(--error);
-  box-shadow: 0px 0px var(--md-sys-elevation-level1) var(--md-sys-color-shadow);
+  box-shadow: 0px 0px var(--md-sys-elevation-level1) var(--md-sys-elevation-level1) var(--md-sys-color-shadow);
 }
