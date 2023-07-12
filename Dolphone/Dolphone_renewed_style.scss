@@ -412,6 +412,7 @@ div.global--wrapper {
 .u-button.type-primary-light:hover {
   filter: none;
   background-color: var(--primaryHover);
+  color: var(--primary);
 }
 .u-list.has-linked-children > li > a:hover {
   background-color: var(--onSurfaceHover);
