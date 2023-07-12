@@ -1012,7 +1012,8 @@ ul.u-list a {
   color: var(--primary);
 }
 
-.dJqELK::after {
+.dJqELK::after,
+.kNySZL::after {
   background-color: var(--primary);
 }
 
