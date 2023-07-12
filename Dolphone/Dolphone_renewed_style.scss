@@ -821,6 +821,11 @@ ul.u-list a {
   color: var(--primary);
   border-radius: var(--md-sys-shape-corner-full);
   border-color: var(--outline);
+  &:hover {
+    filter: none;
+    border: 1px solid var(--outline);
+    background-color: var(--primaryHover);
+  }
 }
 .lbRpAk {
   border: 1px solid var(--outline);

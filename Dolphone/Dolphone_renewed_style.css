@@ -980,6 +980,11 @@ ul.u-list a {
   border-radius: var(--md-sys-shape-corner-full);
   border-color: var(--outline);
 }
+.klVKWm:hover {
+  filter: none;
+  border: 1px solid var(--outline);
+  background-color: var(--primaryHover);
+}
 
 .lbRpAk {
   border: 1px solid var(--outline);
