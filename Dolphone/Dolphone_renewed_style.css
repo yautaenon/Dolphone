@@ -979,6 +979,11 @@ ul.u-list a {
   color: var(--onSurface);
 }
 
-.jVbLCY {
+.jVbLCY,
+.gLjtTp {
   color: var(--onSurfaceVariant);
+}
+
+.bBYUTD {
+  color: var(--tertiary);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
