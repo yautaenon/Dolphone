@@ -1044,4 +1044,16 @@ ul.u-list a {
 
 .fzDMdw {
   border-left: 4px solid var(--primary);
+}
+
+.oGikp {
+  box-shadow: none;
+  background: transparent;
+}
+
+.fictzC {
+  border: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-surface-container-low);
+  color: var(--error);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
