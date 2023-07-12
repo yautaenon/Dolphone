@@ -935,12 +935,14 @@ ul.u-list a {
 }
 
 .cOaepU,
-.l-header .u-global-navigation > .u-global-navigation-pages li.event-calendar > a {
+.l-header .u-global-navigation > .u-global-navigation-pages li.event-calendar > a,
+.eRZPNE {
   color: var(--primary);
 }
 
 #root > div > div.sc-aXZVg.sc-75zdym-0.dKubqp.eOtwIT > div.sc-aXZVg.sc-t0ugq4-0.dKubqp.ybHqr > div > a > div > div.sc-aXZVg.dKubqp > img,
-.l-header .u-global-navigation > .u-global-navigation-pages li.event-calendar > a > img {
+.l-header .u-global-navigation > .u-global-navigation-pages li.event-calendar > a > img,
+#root > div > div.sc-aXZVg.sc-75zdym-0.dKubqp.ca-dDUa > div.sc-aXZVg.sc-t0ugq4-0.dKubqp.eLqmtk > div > a > div > div.sc-aXZVg.dKubqp > img {
   filter: var(--primaryFilter);
 }
 
@@ -999,4 +1001,8 @@ ul.u-list a {
 
 .eLqmtk {
   background-color: var(--background);
+}
+
+.hqpSjF {
+  filter: var(--normaly-darker-filter);
 }/*# sourceMappingURL=Dolphone_renewed_style.css.map */
