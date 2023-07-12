@@ -992,7 +992,8 @@ ul.u-list a {
   color: var(--tertiary);
 }
 
-.hfRabK:hover {
+.hfRabK:hover,
+.l-header .u-global-navigation > .u-global-navigation-pages li.u-global-navigation-account-menu > ul li.setting > .menu .menu-items li a:hover {
   background-color: var(--onSurfaceHover);
 }
 
