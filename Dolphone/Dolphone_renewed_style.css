@@ -1009,7 +1009,8 @@ ul.u-list a {
 }
 
 .dJqELK,
-.jhGUtE:hover {
+.jhGUtE:hover,
+.dJqELK:hover {
   color: var(--primary);
 }
 
