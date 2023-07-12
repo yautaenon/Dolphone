@@ -842,11 +842,13 @@ ul.u-list a {
 .hqpSjF {
   filter: var(--normaly-darker-filter);
 }
-.dJqELK {
+.dJqELK,
+.jhGUtE:hover {
   color: var(--primary);
 }
 .dJqELK::after,
-.kNySZL::after {
+.kNySZL::after,
+.jhGUtE::after {
   background-color: var(--primary);
 }
 .iCZiqY {
