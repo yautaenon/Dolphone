@@ -378,7 +378,7 @@ div.global--wrapper {
 }
 .p-chapter-show .l-column-common.section .u-filter .u-filter-list .u-button {
   border: 1px solid var(--outline);
-  background-color: var(--surface);
+  background-color: inherit;
   color: var(--primary);
   &:hover {
     background-image: linear-gradient(90deg, var(--primaryHover), var(--primaryHover));
