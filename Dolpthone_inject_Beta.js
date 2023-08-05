@@ -274,7 +274,7 @@ function veralart(version, patch, re) {
     timeout: 5000,
     messageColor: "#00c541",
   });
-  console.log(
+  console.debug(
     "%cDolphone%c " + version_sentense,
     "color:#000;background-image:linear-gradient(90deg,#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;",
     "",
@@ -292,7 +292,7 @@ function libalert(procn, msg) {
     timeout: 1000,
     messageColor: "#4f73e3",
   });
-  console.log("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#4f73e3;padding:2px 4px;border-radius:4px;", "");
+  console.debug("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#4f73e3;padding:2px 4px;border-radius:4px;", "");
   // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function libalertimportant(procn, msg) {
@@ -303,7 +303,7 @@ function libalertimportant(procn, msg) {
     timeout: 20000,
     messageColor: "#e3734f",
   });
-  console.log("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#e3734f;padding:2px 4px;border-radius:4px;", "");
+  console.debug("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#e3734f;padding:2px 4px;border-radius:4px;", "");
   // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function mainalert(msg) {
@@ -315,7 +315,7 @@ function mainalert(msg) {
     messageColor: "#00c541",
   });
   // console.log(`[Dolphone] ${msg}`);
-  console.log("%cDolphone%c " + msg, "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;", "");
+  console.debug("%cDolphone%c " + msg, "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;", "");
 }
 function reinject() {
   let p = document.querySelector("script#di");
