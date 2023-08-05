@@ -329,30 +329,32 @@ function reinject() {
   window.top.document.head.appendChild(e);
 }
 function indicatorsetup() {
-  let indic = setInterval(() => {
-    let listel = document.querySelectorAll("li"),
-      nowel = null;
-    for (let i = 0; i < listel.length; i++) {
-      let lcls = listel[i].classList;
-      if (lcls.contains("movie")) {
-        if (listel[i].querySelector("a").classList.contains("is-selected")) {
-          nowel = i;
+  setTimeout(() => {
+    let indic = setInterval(() => {
+      let listel = document.querySelectorAll("li"),
+        nowel = null;
+      for (let i = 0; i < listel.length; i++) {
+        let lcls = listel[i].classList;
+        if (lcls.contains("movie")) {
+          if (listel[i].querySelector("a").classList.contains("is-selected")) {
+            nowel = i;
+          }
         }
       }
-    }
-    if (nowel !== null) {
-      nowel = listel[nowel];
-      //nowel.style.background = `linear-gradient(90deg, #ddd 0%,#ddd 100%)`
-      movieel = document.querySelector("iframe").contentDocument.querySelector("video");
-      let percent = Math.round((movieel.currentTime / movieel.duration) * 1000) / 10;
-      nowel.querySelector("a").style.setProperty("--movie-progress", `${percent}%`);
-      //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
-      //   document
-      //     .querySelector(".progress-circle-color")
-      //     .setAttribute("stroke-dashoffset", String(100 - percent));
-    }
-  }, 20);
-  libalert("Indicator", `Process started; id: ${indic}`);
+      if (nowel !== null) {
+        nowel = listel[nowel];
+        //nowel.style.background = `linear-gradient(90deg, #ddd 0%,#ddd 100%)`
+        movieel = document.querySelector("iframe").contentDocument.querySelector("video");
+        let percent = Math.round((movieel.currentTime / movieel.duration) * 1000) / 10;
+        nowel.querySelector("a").style.setProperty("--movie-progress", `${percent}%`);
+        //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
+        //   document
+        //     .querySelector(".progress-circle-color")
+        //     .setAttribute("stroke-dashoffset", String(100 - percent));
+      }
+    }, 20);
+    libalert("Indicator", `Process started; id: ${indic}`);
+  }, 10000);
 }
 function indicatorUpdate() {
   let listel = document.querySelectorAll("li");
