@@ -159,6 +159,7 @@ function next() {
     lastIndex += 1;
   }
   caps[lastIndex].querySelector("a").click();
+  caps[lastIndex].querySelector("a").scrollIntoView();
   setTimeout(() => {
     indicatorUpdate();
   }, 3000);
