@@ -12,7 +12,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   subsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/003_1s.wav");
   notifsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/002_3s.wav");
   patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
-  alertsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/005_2s.wav");
+  alertsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/alert_2315_002.wav");
   startup();
   setTimeout(() => {
     subscribe();
@@ -373,9 +373,10 @@ function indicatorUpdate() {
       if (listel[i].querySelector("a").classList.contains("is-selected")) {
         listel[i].classList.add("now");
         alertsound.load();
+        alertsound.loop = true;
+        alertsound.play();
         let alertnot = setInterval(() => {
           alertsound.volume = 0.2;
-          alertsound.play();
         }, 10000);
         finishChecker(i, alertnot);
       }
@@ -397,6 +398,7 @@ function finishChecker(pos, indiid) {
       clearInterval(checker);
       libalert("TestCorrectChecker", "process ended.");
       if (listel.classList.contains("now")) listel.classList.remove("now");
+      alertsound.stop();
       setTimeout(() => {
         done();
       }, 5000);
