@@ -13,6 +13,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   notifsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/002_3s.wav");
   patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
   alertsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/alert_2315_002.wav");
+  const controller = new AbortController();
   document.body.addEventListener("click", () => {
     startup();
     setTimeout(() => {
@@ -22,7 +23,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
         next();
       }
     }, 1000);
-    abort();
+    controller.abort();
   });
 });
 function subscribe() {
