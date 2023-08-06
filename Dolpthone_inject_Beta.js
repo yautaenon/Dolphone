@@ -378,6 +378,7 @@ function indicatorUpdate() {
         listel[i].classList.add("now");
         alertsound.load();
         alertsound.loop = true;
+        alertsound.volume = 0.2;
         alertsound.play();
         let alertnot = setInterval(() => {
           alertsound.volume = 0.2;
