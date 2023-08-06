@@ -22,6 +22,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
         next();
       }
     }, 1000);
+    abort();
   });
 });
 function subscribe() {
