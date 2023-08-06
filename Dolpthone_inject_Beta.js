@@ -160,8 +160,8 @@ function next() {
   }
   let beforeLastIndex = lastIndex != 0 ? lastIndex - 1 : 0;
   caps[lastIndex].querySelector("a").click();
-  caps[beforeLastIndex].querySelector("a").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
   setTimeout(() => {
+    caps[beforeLastIndex].querySelector("a").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
     indicatorUpdate();
   }, 3000);
 }
