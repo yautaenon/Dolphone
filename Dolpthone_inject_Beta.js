@@ -158,8 +158,9 @@ function next() {
     }
     lastIndex += 1;
   }
+  let beforeLastIndex = lastIndex != 0 ? lastIndex + 1 : 0;
   caps[lastIndex].querySelector("a").click();
-  caps[lastIndex].querySelector("a").scrollIntoView();
+  caps[beforeLastIndex].querySelector("a").scrollIntoView();
   setTimeout(() => {
     indicatorUpdate();
   }, 3000);
