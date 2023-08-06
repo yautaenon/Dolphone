@@ -13,14 +13,16 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   notifsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/002_3s.wav");
   patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
   alertsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/alert_2315_002.wav");
-  startup();
-  setTimeout(() => {
-    subscribe();
-    styleChecker();
-    if (!document.querySelector("iframe")) {
-      next();
-    }
-  }, 1000);
+  document.body.addEventListener("click", () => {
+    startup();
+    setTimeout(() => {
+      subscribe();
+      styleChecker();
+      if (!document.querySelector("iframe")) {
+        next();
+      }
+    }, 1000);
+  });
 });
 function subscribe() {
   mainalert("Trying to subscribe.");
@@ -268,13 +270,13 @@ function veralart(version, patch, re) {
   let version_color = [patch.substr(0, 6), patch.substr(1, 6)];
   version_color.push(calculateAverageColor(version_color[0], version_color[1]));
   let version_content_color = [calculateFontColor(version_color[0]), calculateFontColor(version_color[1]), calculateFontColor(version_color[2])];
-  iziToast.show({
-    position: "bottomRight",
-    title: "Dolphone",
-    message: toast_sentense,
-    timeout: 5000,
-    messageColor: "#00c541",
-  });
+  // iziToast.show({
+  //   position: "bottomRight",
+  //   title: "Dolphone",
+  //   message: toast_sentense,
+  //   timeout: 5000,
+  //   messageColor: "#00c541",
+  // });
   console.debug(
     "%cDolphone%c " + version_sentense,
     "color:#000;background-image:linear-gradient(90deg,#00c541,#4f73e3,#e3734f);padding:2px 4px;border-radius:4px;",
@@ -286,35 +288,35 @@ function veralart(version, patch, re) {
   );
 }
 function libalert(procn, msg) {
-  iziToast.show({
-    position: "bottomRight",
-    title: "DolphoneLib - " + procn,
-    message: msg,
-    timeout: 1000,
-    messageColor: "#4f73e3",
-  });
+  // iziToast.show({
+  //   position: "bottomRight",
+  //   title: "DolphoneLib - " + procn,
+  //   message: msg,
+  //   timeout: 1000,
+  //   messageColor: "#4f73e3",
+  // });
   console.debug("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#4f73e3;padding:2px 4px;border-radius:4px;", "");
   // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function libalertimportant(procn, msg) {
-  iziToast.show({
-    position: "topRight",
-    title: "DolphoneLib - " + procn,
-    message: msg,
-    timeout: 20000,
-    messageColor: "#e3734f",
-  });
+  // iziToast.show({
+  //   position: "topRight",
+  //   title: "DolphoneLib - " + procn,
+  //   message: msg,
+  //   timeout: 20000,
+  //   messageColor: "#e3734f",
+  // });
   console.debug("%cDolphoneLib - " + procn + "%c " + msg, "color:#000;background-color:#e3734f;padding:2px 4px;border-radius:4px;", "");
   // console.log(`[DolphoneLib - ${procn}] ${msg}`);
 }
 function mainalert(msg) {
-  iziToast.show({
-    position: "bottomRight",
-    title: "Dolphone",
-    message: msg,
-    timeout: 1000,
-    messageColor: "#00c541",
-  });
+  // iziToast.show({
+  //   position: "bottomRight",
+  //   title: "Dolphone",
+  //   message: msg,
+  //   timeout: 1000,
+  //   messageColor: "#00c541",
+  // });
   // console.log(`[Dolphone] ${msg}`);
   console.debug("%cDolphone%c " + msg, "color:#000;background-color:#00c541;padding:2px 4px;border-radius:4px;", "");
 }
