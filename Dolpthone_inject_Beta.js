@@ -381,14 +381,14 @@ function indicatorUpdate() {
         let alertnot = setInterval(() => {
           alertsound.volume = 0.2;
         }, 1000);
-        finishChecker(i, alertnot);
+        finishChecker(i, alertnot, alertsound);
       }
     }
   }
   setTimeout(videochecker(2), 2000);
   libalert("Indicator", "Indicator Updated.");
 }
-function finishChecker(pos, indiid) {
+function finishChecker(pos, indiid, alert) {
   let renewedStyle = document.createElement("link");
   renewedStyle.rel = "stylesheet";
   renewedStyle.href = dolphoneCSS;
@@ -401,7 +401,7 @@ function finishChecker(pos, indiid) {
       clearInterval(checker);
       libalert("TestCorrectChecker", "process ended.");
       if (listel.classList.contains("now")) listel.classList.remove("now");
-      alertsound.loop = false;
+      alert.loop = false;
       setTimeout(() => {
         done();
       }, 5000);
