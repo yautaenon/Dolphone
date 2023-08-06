@@ -13,8 +13,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   notifsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/002_3s.wav");
   patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
   alertsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/alert_2315_002.wav");
-  const controller = new AbortController();
-  document.body.addEventListener("click", () => {
+  function setupOnClick() {
     startup();
     setTimeout(() => {
       subscribe();
@@ -23,8 +22,9 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
         next();
       }
     }, 1000);
-    controller.abort();
-  });
+    document.body.removeEventListener("click", setupOnClick, false);
+  }
+  document.body.addEventListener("click", setupOnClick, false);
 });
 function subscribe() {
   mainalert("Trying to subscribe.");
