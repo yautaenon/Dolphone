@@ -170,6 +170,10 @@ textarea {
   overflow-y: hidden;
 }
 
+.exercise .section-item .type-descriptive.answer-area .counter span {
+  font-family: "Major Mono Display", var(--md-ref-typeface-plain);
+}
+
 a,
 a:hover,
 a:active {
