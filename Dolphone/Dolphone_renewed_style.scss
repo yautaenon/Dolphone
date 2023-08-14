@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Noto+Sans+JP:wght@400;500&family=Roboto:wght@400;500&display=swap");
 @media (prefers-color-scheme: light) {
   :root {
     --primary: #4d57a9;
@@ -84,8 +84,8 @@
   }
 }
 :root {
-  --md-ref-typeface-plain: "Noto Sans Medium";
-  --md-ref-typeface-brand: "Noto Sans Regular";
+  --md-ref-typeface-plain: "Roboto", "Noto Sans JP", sans-serif;
+  --md-ref-typeface-brand: "Roboto", "Noto Sans JP", sans-serif;
   --md-ref-typeface-weight-regular: 400;
   --md-ref-typeface-weight-medium: 500;
   --md-sys-color-outline: var(--outline);
