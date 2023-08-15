@@ -190,8 +190,14 @@ textarea {
   opacity: 0.2;
   position: absolute;
 }
-.time-checker code.digit-time_7 ::before, .time-checker code.digit-time_8 ::before {
+.time-checker code.digit-time::before {
   content: "~~ ~~ ~~";
+}
+.time-checker code.digit-count::before {
+  content: "~~";
+}
+.time-checker code.digit-ratio::before {
+  content: "~~~~";
 }
 
 a,

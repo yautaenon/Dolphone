@@ -182,12 +182,15 @@ textarea {
     opacity: 0.2;
     position: absolute;
   }
-  &.digit-time {
-    &_7,
-    &_8 {
-      ::before {
-        content: "~~ ~~ ~~";
-      }
+  &.digit- {
+    &time::before {
+      content: "~~ ~~ ~~";
+    }
+    &count::before {
+      content: "~~";
+    }
+    &ratio::before {
+      content: "~~~~";
     }
   }
 }
