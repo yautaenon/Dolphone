@@ -194,7 +194,7 @@ textarea {
   content: "~~ ~~ ~~";
 }
 .time-checker code.digit-count::before {
-  content: "~~~";
+  content: "~~~  ~  ~~~";
 }
 .time-checker code.digit-ratio::before {
   content: "~~~~";
