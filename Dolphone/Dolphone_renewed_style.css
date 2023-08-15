@@ -4,6 +4,10 @@
   font-family: "DSEG7 Classic Mini Bold Italic";
   src: url("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/DSEG7ClassicMini-BoldItalic.ttf") format("truetype");
 }
+@font-face {
+  font-family: "DSEG14 Classic Mini Bold Italic";
+  src: url("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/DSEG14ClassicMini-BoldItalic.ttf") format("truetype");
+}
 @media (prefers-color-scheme: light) {
   :root {
     --primary: #4d57a9;
@@ -177,6 +181,20 @@ textarea {
 .exercise .section-item .type-descriptive.answer-area .counter span {
   font-family: "DSEG7 Classic Mini Bold Italic", "Major Mono Display", var(--md-ref-typeface-plain);
   font-size: 12px;
+}
+
+.time-checker code {
+  font-family: "DSEG14 Classic Mini Bold Italic", var(--md-ref-typeface-plain);
+}
+.time-checker code ::before {
+  opacity: 0.2;
+  position: absolute;
+}
+.time-checker code ::before .digit-time _7 {
+  content: "~ ~~ ~~";
+}
+.time-checker code ::before .digit-time _8 {
+  content: "~~ ~~ ~~";
 }
 
 a,
