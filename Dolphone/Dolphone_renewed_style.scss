@@ -181,13 +181,13 @@ textarea {
   &::before {
     opacity: 0.2;
     position: absolute;
-    &.digit-time {
-      &_7 {
-        content: "~ ~~ ~~";
-      }
-      &_8 {
-        content: "~~ ~~ ~~";
-      }
+  }
+  &.digit-time {
+    &_7::before {
+      content: "~ ~~ ~~";
+    }
+    &_8::before {
+      content: "~~ ~~ ~~";
     }
   }
 }

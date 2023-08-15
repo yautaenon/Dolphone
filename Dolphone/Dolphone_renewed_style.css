@@ -190,10 +190,10 @@ textarea {
   opacity: 0.2;
   position: absolute;
 }
-.time-checker code::before.digit-time_7 {
+.time-checker code.digit-time_7::before {
   content: "~ ~~ ~~";
 }
-.time-checker code::before.digit-time_8 {
+.time-checker code.digit-time_8::before {
   content: "~~ ~~ ~~";
 }
 
