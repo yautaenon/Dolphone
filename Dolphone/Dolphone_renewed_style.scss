@@ -178,16 +178,21 @@ textarea {
 }
 .time-checker code {
   font-family: "DSEG14 Classic Bold Italic", var(--md-ref-typeface-plain);
-  &::before {
+  &::after {
     opacity: 0.2;
     position: absolute;
   }
   &.digit-time {
-    &_7::before {
+    &_7::after {
       content: "~ ~~ ~~";
     }
-    &_8::before {
-      content: "~~ ~~ ~~";
+    &_8 {
+      ::before {
+        content: "!";
+      }
+      ::after {
+        content: "~~ ~~ ~~";
+      }
     }
   }
 }

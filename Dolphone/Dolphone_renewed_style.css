@@ -186,14 +186,17 @@ textarea {
 .time-checker code {
   font-family: "DSEG14 Classic Bold Italic", var(--md-ref-typeface-plain);
 }
-.time-checker code::before {
+.time-checker code::after {
   opacity: 0.2;
   position: absolute;
 }
-.time-checker code.digit-time_7::before {
+.time-checker code.digit-time_7::after {
   content: "~ ~~ ~~";
 }
-.time-checker code.digit-time_8::before {
+.time-checker code.digit-time_8 ::before {
+  content: "!";
+}
+.time-checker code.digit-time_8 ::after {
   content: "~~ ~~ ~~";
 }
 
