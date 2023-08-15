@@ -183,8 +183,14 @@ textarea {
   font-size: 12px;
 }
 
+body > .l-wrapper > .l-contents-wrapper .l-contents {
+  width: 1020px;
+}
+
 .time-checker code {
   font-family: "DSEG14 Classic Bold Italic", var(--md-ref-typeface-plain);
+  font-size: 16px;
+  font-weight: bold;
 }
 .time-checker code::before {
   opacity: 0.2;
