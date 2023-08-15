@@ -4,8 +4,8 @@
   src: url("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/DSEG7ClassicMini-BoldItalic.ttf") format("truetype");
 }
 @font-face {
-  font-family: "DSEG14 Classic Mini Bold Italic";
-  src: url("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/DSEG14ClassicMini-BoldItalic.ttf") format("truetype");
+  font-family: "DSEG14 Classic Bold Italic";
+  src: url("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/DSEG14Classic-BoldItalic.ttf") format("truetype");
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -177,7 +177,7 @@ textarea {
   font-size: 12px;
 }
 .time-checker code {
-  font-family: "DSEG14 Classic Mini Bold Italic", var(--md-ref-typeface-plain);
+  font-family: "DSEG14 Classic Bold Italic", var(--md-ref-typeface-plain);
   &::before {
     opacity: 0.2;
     position: absolute;
