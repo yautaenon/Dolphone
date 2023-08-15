@@ -178,14 +178,14 @@ textarea {
 }
 .time-checker code {
   font-family: "DSEG14 Classic Mini Bold Italic", var(--md-ref-typeface-plain);
-  ::before {
+  &::before {
     opacity: 0.2;
     position: absolute;
-    .digit-time {
-      _7 {
+    &.digit-time {
+      &_7 {
         content: "~ ~~ ~~";
       }
-      _8 {
+      &_8 {
         content: "~~ ~~ ~~";
       }
     }
