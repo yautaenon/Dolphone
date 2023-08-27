@@ -396,6 +396,8 @@ input[type=text]::-moz-placeholder, textarea::-moz-placeholder {
   letter-spacing: var(--md-sys-typescale-body-large-tracking);
   -moz-transition: line-height linear 0.15s, font-size linear 0.15s, transform linear 0.15s;
   transition: line-height linear 0.15s, font-size linear 0.15s, transform linear 0.15s;
+  -moz-user-select: none;
+       user-select: none;
 }
 
 input[type=text]::placeholder,
@@ -407,6 +409,9 @@ textarea::placeholder {
   font-weight: var(--md-sys-typescale-body-large-weight);
   letter-spacing: var(--md-sys-typescale-body-large-tracking);
   transition: line-height linear 0.15s, font-size linear 0.15s, transform linear 0.15s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 input[type=text]:focus::-moz-placeholder, textarea:focus::-moz-placeholder {

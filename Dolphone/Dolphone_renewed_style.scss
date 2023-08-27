@@ -357,6 +357,7 @@ textarea::placeholder {
   font-weight: var(--md-sys-typescale-body-large-weight);
   letter-spacing: var(--md-sys-typescale-body-large-tracking);
   transition: line-height linear 0.15s, font-size linear 0.15s, transform linear 0.15s;
+  user-select: none;
 }
 input[type="text"]:focus::placeholder,
 textarea:focus::placeholder {
