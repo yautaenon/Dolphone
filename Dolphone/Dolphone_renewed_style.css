@@ -820,6 +820,14 @@ li.essay-test.good {
   border-bottom: solid 5px var(--secondary) !important;
 }
 
+.mode-contents-watch-maximized > .l-wrapper .p-chapter-show > .l-contents.p-chapters-show > .l-column-common.section .u-list li a.is-selected {
+  background: var(--md-sys-color-surface-container-highest);
+}
+
+.mode-contents-watch-maximized > .l-wrapper .p-chapter-show {
+  background: var(--background);
+}
+
 li.good {
   transition: border-width 150ms ease-in-out;
 }
