@@ -840,12 +840,14 @@ ul.u-list a {
 .iDrGTO {
   background-color: var(--md-sys-color-surface-container-high);
 }
-.fjiCMT,
-.dpJLOY {
+.fjiCMT {
   background-color: var(--tertiary);
 }
+.dpJLOY {
+  background-color: var(--tertiaryContainer);
+}
 .fFRytb {
-  color: var(--onTertiary);
+  color: var(--onTertiaryContainer);
 }
 .evJGlU:hover {
   background-color: var(--onSurfaceHover);
