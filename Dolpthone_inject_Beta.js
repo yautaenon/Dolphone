@@ -104,12 +104,12 @@ function videochecker(fromid) {
   setTimeout(() => {
     // styleApply();
     let selectedItemType = document.querySelector("ul[aria-label=必修教材リスト]>li:has(.zixPn)");
-    selectedItemType = selectedItemType.querySelector("li:has(.fqYQlS)") ? "movie" : selectedItemType.innerHTML.includes("記述/選択テスト") ? "evaluation-test" : selectedItemType.innerHTML.includes("論述テスト") ? "essay-test" : "unknown";
+    selectedItemType = selectedItemType.querySelector("li:has(.iuHQbN)") ? "movie" : selectedItemType.innerHTML.includes("記述/選択テスト") ? "evaluation-test" : selectedItemType.innerHTML.includes("論述テスト") ? "essay-test" : "unknown";
     libalert("SelectedTypeDetecter", 'Selected Item Type is: "' + selectedItemType + '".');
     if (selectedItemType == "movie") {
       let process = setInterval(() => {
-        let video = window.top.document.querySelector("iframe").contentDocument.querySelector("#video-player");
-        // console.log(video.currentTime + "/" + video.duration);
+        let video = window.top.document.querySelector("iframe[title='教材']").contentDocument.querySelector("#video-player");
+        console.debug(video.currentTime + "/" + video.duration);
         if (video.duration <= video.currentTime) {
           done();
           libalertimportant("VideoDurationChecker", "process ended.");
