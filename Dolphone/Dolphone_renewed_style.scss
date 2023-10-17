@@ -594,7 +594,7 @@ div.global--wrapper {
   background-color: #222;
 }
 li.movie.good,
-ul[aria-label="必修教材リスト"] > li:has(.iuHQbN):has(.fqYQlS):not(:has(.hoWVG)) {
+ul[aria-label="必修教材リスト"] > li:has(.fqYQlS):has(i[style*="color: rgb(0, 197, 65);"]) {
   background: var(--tertiary);
   background: var(--md-sys-color-surface-container-highest);
   border-bottom: solid 5px var(--tertiary) !important;
