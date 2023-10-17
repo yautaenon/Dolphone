@@ -796,11 +796,7 @@ li.essay-test:has(> a.is-selected),
 li.evaluation-test:has(> a.is-selected),
 li.evaluation-report:has(> a.is-selected),
 li.essay-report:has(> a.is-selected),
-ul[aria-label=必修教材リスト] > li.movie:has(.zixPn),
-ul[aria-label=必修教材リスト] > li.essay-test:has(.zixPn),
-ul[aria-label=必修教材リスト] > li.evaluation-test:has(.zixPn),
-ul[aria-label=必修教材リスト] > li.evaluation-report:has(.zixPn),
-ul[aria-label=必修教材リスト] > li.essay-report:has(.zixPn) {
+ul[aria-label=必修教材リスト] > li:has(.zixPn) {
   border-right: solid 3px var(--primary) !important;
 }
 
