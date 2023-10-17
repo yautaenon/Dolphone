@@ -163,9 +163,9 @@ function next() {
     lastIndex += 1;
   }
   let beforeLastIndex = lastIndex != 0 ? lastIndex - 1 : 0;
-  caps[lastIndex].querySelector("a").click();
+  caps[lastIndex].querySelector("div").click();
   setTimeout(() => {
-    caps[beforeLastIndex].querySelector("a").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    caps[beforeLastIndex].querySelector("div").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
     indicatorUpdate();
   }, 3000);
 }
