@@ -1195,7 +1195,8 @@ ul.u-list a {
 }
 
 .cMtRut,
-.bKupGM {
+.bKupGM,
+.kmjwyG:last-child {
   border-radius: 0 0 var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium);
 }
 
