@@ -109,7 +109,7 @@ function videochecker(fromid) {
     if (selectedItemType == "movie") {
       let process = setInterval(() => {
         let video = window.top.document.querySelector("iframe[title='教材']").contentDocument.querySelector("#video-player");
-        console.debug(video.currentTime + "/" + video.duration);
+        // console.debug(video.currentTime + "/" + video.duration);
         if (video.duration <= video.currentTime) {
           done();
           libalertimportant("VideoDurationChecker", "process ended.");
