@@ -147,7 +147,7 @@ function next() {
   let lastIndex = 0;
   for (const item in caps) {
     const ct = caps[item].innerHTML;
-    if (!ct.includes("視聴済み")) {
+    if (!ct.includes("color: rgb(0, 197, 65);")) {
       if (ct.includes("movie-rounded") && !ct.includes("movie-rounded-plus")) {
         break;
       } else if (ct.includes("記述/選択テスト") || ct.includes("論述テスト")) {
