@@ -74,7 +74,7 @@ function subscribe() {
         attributes: true,
       });
     });
-    modalObserver.observe(document.querySelector("div.ReactModal__Content"), {
+    modalObserver.observe(document.querySelector("div.ReactModalPortal"), {
       childList: true,
     });
   }
