@@ -302,11 +302,13 @@ a:active {
   height: 4px;
 }
 
-.u-progress.size-l {
+.u-progress.size-l,
+.cmgDL {
   height: 4px;
   border-radius: var(--md-sys-shape-corner-none);
 }
-.u-progress.size-l > .u-progress-bar > li {
+.u-progress.size-l > .u-progress-bar > li,
+.cmgDL > .u-progress-bar > li {
   height: 4px;
   border-radius: var(--md-sys-shape-corner-none);
 }
@@ -798,7 +800,8 @@ li.essay-report:has(> a.is-selected) {
 }
 
 li.evaluation-test > a,
-li.essay-test > a {
+li.essay-test > a,
+li > div:has(.iFkSEV) {
   border-left: 3px solid var(--secondary);
 }
 

@@ -277,7 +277,8 @@ a:active {
   background-color: var(--md-sys-color-surface-container-highest);
   height: 4px;
 }
-.u-progress.size-l {
+.u-progress.size-l,
+.cmgDL {
   height: 4px;
   border-radius: var(--md-sys-shape-corner-none);
   & > .u-progress-bar > li {
@@ -674,7 +675,8 @@ li.essay-report:has(> a.is-selected) {
   border-right: solid 3px var(--primary) !important;
 }
 li.evaluation-test > a,
-li.essay-test > a {
+li.essay-test > a,
+li > div:has(.iFkSEV) {
   border-left: 3px solid var(--secondary);
 }
 li.evaluation-test:last-child > a,

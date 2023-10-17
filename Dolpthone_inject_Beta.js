@@ -70,7 +70,7 @@ function subscribe() {
       });
       // console.log(mutations[0]);
       libalert("AppModalObserver", "Successfully detected.");
-      inneriframeObserver.observe(document.querySelector("#modal-inner-iframe"), {
+      inneriframeObserver.observe(document.querySelector('iframe[title="教材"]'), {
         attributes: true,
       });
     });
