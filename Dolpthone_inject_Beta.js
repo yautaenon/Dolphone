@@ -363,9 +363,9 @@ function indicatorsetup() {
 }
 function indicatorUpdate() {
   let listel = document.querySelectorAll("li");
-  if (document.querySelector("div.u-card.has-no-padding").querySelector(".u-filter")) {
-    if (!document.querySelector("#sections-contents > div.l-column-common.section > div.u-card.has-no-padding > div.u-filter > div > div:nth-child(1)").classList.contains("u-filter-active")) {
-      document.querySelector("#sections-contents > div.l-column-common.section > div.u-card.has-no-padding > div.u-filter > div > div:nth-child(1)").click();
+  if (document.querySelector('div[aria-label="教材フィルタ"]').querySelector(".u-filter")) {
+    if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
+      document.querySelector('button[aria-label="必修教材のみ"]').click();
     }
   }
   for (let i = 0; i < listel.length; i++) {
