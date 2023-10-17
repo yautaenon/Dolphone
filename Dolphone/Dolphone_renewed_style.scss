@@ -591,7 +591,8 @@ div.global--wrapper {
 .report-notice-body {
   background-color: #222;
 }
-li.movie.good {
+li.movie.good,
+ul[aria-label="必修教材リスト"] > li:has(.iuHQbN) {
   background: var(--tertiary);
   background: var(--md-sys-color-surface-container-highest);
   border-bottom: solid 5px var(--tertiary) !important;
@@ -674,6 +675,9 @@ li.evaluation-report:has(> a.is-selected),
 li.essay-report:has(> a.is-selected),
 ul[aria-label="必修教材リスト"] > li:has(.zixPn) {
   border-right: solid 3px var(--primary) !important;
+}
+.zixPn {
+  border-right: none;
 }
 ul[aria-label="必修教材リスト"] > li.evaluation-test > a,
 ul[aria-label="必修教材リスト"] > li.essay-test > a,
