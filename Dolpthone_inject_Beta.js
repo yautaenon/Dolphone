@@ -150,7 +150,7 @@ function next() {
     if (!ct.includes("視聴済み")) {
       if (ct.includes("movie-rounded") && !ct.includes("movie-rounded-plus")) {
         break;
-      } else if (cl.contains("記述/選択テスト") || cl.contains("論述テスト")) {
+      } else if (ct.contains("記述/選択テスト") || ct.contains("論述テスト")) {
         notifsound.load();
         notifsound.volume = 0.2;
         notifsound.play();
