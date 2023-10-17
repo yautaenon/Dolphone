@@ -297,18 +297,19 @@ a:active {
 
 .u-progress,
 .dlCWCQ,
-.grfyIa {
+.grfyIa,
+.cmgDL {
   background-color: var(--md-sys-color-surface-container-highest);
   height: 4px;
 }
 
 .u-progress.size-l,
-.cmgDL {
+.cmgDL .sc-1yme7mc-0 {
   height: 4px;
   border-radius: var(--md-sys-shape-corner-none);
 }
 .u-progress.size-l > .u-progress-bar > li,
-.cmgDL > .u-progress-bar > li {
+.cmgDL .sc-1yme7mc-0 > .u-progress-bar > li {
   height: 4px;
   border-radius: var(--md-sys-shape-corner-none);
 }
@@ -530,7 +531,8 @@ div.global--wrapper {
   background-color: #000;
 }
 
-.u-button.type-primary-light {
+.u-button.type-primary-light,
+.kOPMJM {
   border: solid 1px var(--outline);
   border-radius: var(--md-sys-shape-corner-full);
   background-color: inherit;
@@ -922,7 +924,8 @@ ul.u-list a {
 }
 
 .ybHqr,
-.l-header .u-global-navigation {
+.l-header .u-global-navigation,
+.kJivYg {
   background-color: var(--background);
   box-shadow: var(--onSurfaceHover) 0px 2px 2px;
 }
@@ -1211,6 +1214,14 @@ ul.u-list a {
 .kmjwyG:last-child .dJUTyM,
 .kmjwyG:last-child .hoWVG::after {
   border-radius: 0 0 var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium);
+}
+
+.dJUTyM {
+  background-image: none;
+}
+
+.kmjwyG .hoWVG::after {
+  filter: brightness(0.1);
 }
 
 .imrhwh {
