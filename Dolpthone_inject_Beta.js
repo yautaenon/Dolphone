@@ -9,9 +9,9 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   // if (window_b9012ye1by98ryn98dy1_Dolpthone_BranchID === undefined) window_b9012ye1by98ryn98dy1_Dolpthone_BranchID = "1114918";
   window_ony98gvayn9fj8hg98ha_Dolpthone_versionType = "_Beta";
   // main script
-  subsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/003_1s.wav");
-  notifsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/002_3s.wav");
-  patchsound = new Audio("https://aika-toki.github.io/others/library/NotiSound/001_2s.wav");
+  subsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/003_1s.wav");
+  notifsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/002_3s.wav");
+  patchsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/001_2s.wav");
   alertsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/alert_2315_002.wav");
   function setupOnClick() {
     startup();
@@ -172,12 +172,12 @@ function next() {
 function startup() {
   if (!document.body.classList.contains("izialready")) {
     let swalsc = window.top.document.createElement("script");
-    swalsc.src = "//aika-toki.github.io/others/library/iziToast/iziToast.min.js";
+    swalsc.src = "https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/iziToast/iziToast.min.js";
     swalsc.id = "iziToastScript";
     window.top.document.querySelector("script#di").before(swalsc);
     let swalst = document.createElement("link");
     swalst.rel = "stylesheet";
-    swalst.href = "//aika-toki.github.io/others/library/iziToast/iziToast.min.css";
+    swalst.href = "https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/iziToast/iziToast.min.css";
     swalst.id = "iziToastStyle";
     window.top.document.head.appendChild(swalst);
     let indicatorStyle = document.createElement("link");
