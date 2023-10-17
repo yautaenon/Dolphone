@@ -259,7 +259,8 @@ a:active {
   border-color: var(--outline);
 }
 
-.u-list-header {
+.u-list-header,
+.eovZuA {
   border: solid 0px var(--outline);
   border-top-left-radius: var(--md-sys-shape-corner-medium);
   border-top-right-radius: var(--md-sys-shape-corner-medium);
