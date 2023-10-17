@@ -143,7 +143,7 @@ function done() {
 }
 function next() {
   mainalert("Trying to access next content.");
-  const caps = window.top.document.getElementsByClassName("u-list")[0].getElementsByTagName("li");
+  const caps = window.top.document.querySelectorAll('[aria-label="必修教材リスト"]')[0].getElementsByTagName("li");
   let lastIndex = 0;
   for (const item in caps) {
     const cl = caps[item].classList;
