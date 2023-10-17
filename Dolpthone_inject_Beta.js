@@ -146,11 +146,11 @@ function next() {
   const caps = window.top.document.querySelectorAll('[aria-label="必修教材リスト"]')[0].getElementsByTagName("li");
   let lastIndex = 0;
   for (const item in caps) {
-    const cl = caps[item].classList;
-    if (!cl.contains("good")) {
-      if (cl.contains("movie") && !cl.contains("supplement")) {
+    const ct = caps[item].innerHTML;
+    if (!ct.includes("視聴済み")) {
+      if (ct.includes("movie-rounded") && !ct.includes("movie-rounded-plus")) {
         break;
-      } else if (cl.contains("evaluation-test") || cl.contains("essay-test")) {
+      } else if (cl.contains("記述/選択テスト") || cl.contains("論述テスト")) {
         notifsound.load();
         notifsound.volume = 0.2;
         notifsound.play();
