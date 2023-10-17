@@ -707,7 +707,7 @@ div.global--wrapper {
 }
 
 li.movie.good,
-ul[aria-label=必修教材リスト] > li:has(.iuHQbN):not(:has(.hoWVG)) {
+ul[aria-label=必修教材リスト] > li:has(.iuHQbN):has(.fqYQlS):not(:has(.hoWVG)) {
   background: var(--tertiary);
   background: var(--md-sys-color-surface-container-highest);
   border-bottom: solid 5px var(--tertiary) !important;
