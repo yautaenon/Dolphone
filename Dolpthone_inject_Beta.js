@@ -362,7 +362,7 @@ function indicatorsetup() {
 }
 function indicatorUpdate() {
   let listel = document.querySelectorAll("li");
-  if (document.querySelector('div[aria-label="教材フィルタ"]').querySelector(".u-filter")) {
+  if (document.querySelector('div[aria-label="教材フィルタ"]').querySelectorAll(".khUwkq")) {
     if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
       document.querySelector('button[aria-label="必修教材のみ"]').click();
     }
