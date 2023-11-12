@@ -366,7 +366,9 @@ function indicatorsetup() {
         //nowel.style.background = `linear-gradient(90deg, #ddd 0%,#ddd 100%)`
         movieel = document.querySelector("iframe").contentDocument.querySelector("video");
         let percent = Math.round((movieel.currentTime / movieel.duration) * 1000) / 10;
-        nowel.querySelector("svg>circle:nth-of-type(2)").setAttribute("stroke-dashoffset", 100 - percent);
+        if (nowel.querySelector("svg>circle:nth-of-type(2)")) {
+          nowel.querySelector("svg>circle:nth-of-type(2)").setAttribute("stroke-dashoffset", 100 - percent);
+        }
         nowel.querySelector("div").style.setProperty("--movie-progress", `${percent}%`);
         //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
         //   document
