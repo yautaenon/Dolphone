@@ -399,14 +399,19 @@ function indicatorUpdate() {
   for (let i = 0; i < listel.length; i++) {
     let lcls = listel[i].classList;
     if (lcls.contains("movie")) {
+      libalert("IndicatorUpdator", `Item [${i}] is "movie"`);
       if (lcls.contains("good")) {
         //listel[i].style.backgroundColor = "#9fb";
+        libalert("IndicatorUpdator", `Item [${i}] is "movie-good"`);
       }
     } else if (lcls.contains("evaluation-test") || lcls.contains("essay-test")) {
+      libalert("IndicatorUpdator", `Item [${i}] is "test"`);
       if (lcls.contains("good")) {
+        libalert("IndicatorUpdator", `Item [${i}] is "test-good"`);
         // listel[i].style.background = "#adbdeb";
       }
       if (listel[i].querySelector("div.zixPn")) {
+        libalert("IndicatorUpdator", `Item [${i}] is "test-progress"`);
         listel[i].classList.add("now");
         alertsound.load();
         alertsound.loop = true;
