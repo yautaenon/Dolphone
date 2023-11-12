@@ -367,6 +367,7 @@ function indicatorsetup() {
         movieel = document.querySelector("iframe").contentDocument.querySelector("video");
         let percent = Math.round((movieel.currentTime / movieel.duration) * 1000) / 10;
         nowel.querySelector("svg>circle:nth-of-type(2)").setAttribute("stroke-dashoffset", 100 - percent);
+        nowel.querySelector("svg>circle:nth-of-type(2)").style.setProperty("--movie-progress", `${percent}%`);
         //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
         //   document
         //     .querySelector(".progress-circle-color")
