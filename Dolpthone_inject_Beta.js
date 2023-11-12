@@ -163,6 +163,7 @@ function next() {
   }
   let beforeLastIndex = lastIndex != 0 ? lastIndex - 1 : 0;
   caps[lastIndex].querySelector("div").click();
+  indicatorUpdate();
   setTimeout(() => {
     caps[beforeLastIndex].querySelector("div").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
     indicatorUpdate();
