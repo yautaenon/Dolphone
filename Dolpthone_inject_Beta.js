@@ -17,7 +17,7 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   function setupOnClick() {
     startup();
     setTimeout(() => {
-      subscribe();
+      //subscribe();
       styleChecker();
       if (!document.querySelector("iframe")) {
         next();
@@ -84,7 +84,7 @@ function styleChecker() {
   let proc = setInterval(() => {
     // if (!window.top.document.querySelector("iframe")) return;
     if (!window.top.document.querySelector("iframe")) {
-      subscribe();
+      done();
     }
     let element = window.top.document.querySelector("iframe").contentDocument;
     element.querySelector("link#renewedStyle") || styleApply(element);
