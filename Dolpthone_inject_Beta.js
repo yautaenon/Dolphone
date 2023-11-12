@@ -1,6 +1,7 @@
 window_5209hbf298hew9jfiowg_Dolpthone_version = "1.1.0";
 var window_b9012ye1by98ryn98dy1_Dolpthone_BranchID;
 var dolphoneJS, dolphoneCSS, dolphoneIndicator;
+var styleProcs = [];
 $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5xVi_1DLFOy8Qe-n4nt8dSq84laKWZf3Ey4iUKM/exec?id=" + ProductKey, (data) => {
   dolphoneJS = data.url;
   dolphoneCSS = data.css;
