@@ -393,7 +393,7 @@ function indicatorUpdate() {
       if (lcls.contains("good")) {
         // listel[i].style.background = "#adbdeb";
       }
-      if (listel[i].querySelector("a").classList.contains("is-selected")) {
+      if (listel[i].querySelector("div.zixPn")) {
         listel[i].classList.add("now");
         alertsound.load();
         alertsound.loop = true;
