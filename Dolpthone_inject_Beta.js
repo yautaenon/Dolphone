@@ -104,7 +104,7 @@ function videochecker(fromid) {
   setTimeout(() => {
     // styleApply();
     let selectedItemType = document.querySelector("ul[aria-label=必修教材リスト]>li:has(.zixPn)");
-    selectedItemType = selectedItemType.querySelector(":has(i[type='movie-rounded'])") ? "movie" : selectedItemType.innerHTML.includes("記述/選択テスト") ? "evaluation-test" : selectedItemType.innerHTML.includes("論述テスト") ? "essay-test" : "unknown";
+    selectedItemType = selectedItemType.querySelector(":has(i[type='movie-rounded'])") ? "movie" : selectedItemType.innerHTML.includes("記述/選択") ? "evaluation-test" : selectedItemType.innerHTML.includes("論述") ? "essay-test" : "unknown";
     libalert("SelectedTypeDetecter", 'Selected Item Type is: "' + selectedItemType + '".');
     if (selectedItemType == "movie") {
       let process = setInterval(() => {
@@ -336,8 +336,23 @@ function reinject() {
 function indicatorsetup() {
   setTimeout(() => {
     let indic = setInterval(() => {
-      let listel = document.querySelectorAll("li"),
+      let listel = document.querySelectorAll("ul[aria-label='必修教材リスト']>li"),
         nowel = null;
+      [...listel].forEach((e) => {
+        if (e.querySelector('i[type="movie-rounded"]')) {
+          e.classList.add("movie");
+        }
+        if (e.querySelector("div.iFkSEV")) {
+          if (e.innerHTML.includes("記述/選択")) {
+            e.classList.add("evaluation-test");
+          } else if (e.innerHTML.includes("論述")) {
+            e.classList.add("essay-test");
+          }
+        }
+        if (e.querySelector("i[style*='color: rgb(0, 197, 65);']")) {
+          e.classList.add("good");
+        }
+      });
       for (let i = 0; i < listel.length; i++) {
         let lcls = listel[i].classList;
         if (lcls.contains("movie")) {
