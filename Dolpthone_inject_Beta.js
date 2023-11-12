@@ -200,7 +200,7 @@ function startup() {
   }
   patchsound.load();
   patchsound.volume = 0.2;
-  if (window.top.document.querySelector("script#di").className == "") {
+  if (!window.top.document.body.classList.contains("izialready")) {
     setTimeout(() => {
       patchsound.play();
       window.top.veralart(version, window_5209hbf298hew9jfiowg_Dolpthone_patch, re);
