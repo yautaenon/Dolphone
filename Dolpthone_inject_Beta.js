@@ -151,7 +151,7 @@ function next() {
         break;
       } else if (ct.includes("記述/選択") || ct.includes("論述")) {
         notifsound.load();
-        notifsound.volume = 0.2;
+        notifsound.volume = 0.201;
         notifsound.play();
         notifsound.addEventListener("ended", () => {
           notifsound = "";
