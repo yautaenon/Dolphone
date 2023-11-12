@@ -149,7 +149,7 @@ function next() {
     if (!ct.includes("color: rgb(0, 197, 65);")) {
       if (ct.includes("movie-rounded") && !ct.includes("movie-rounded-plus")) {
         break;
-      } else if (ct.includes("記述/選択テスト") || ct.includes("論述テスト")) {
+      } else if (ct.includes("記述/選択") || ct.includes("論述")) {
         notifsound.load();
         notifsound.volume = 0.2;
         notifsound.play();
