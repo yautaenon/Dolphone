@@ -170,6 +170,13 @@ function next() {
   caps[lastIndex].querySelector("div").click();
   setTimeout(() => {
     caps[beforeLastIndex].querySelector("div").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    if (styleProcs.length > 1) {
+      styleProcs.forEach((e, i) => {
+        if (styleProcs.length > 1) {
+          clearInterval(styleProcs.pop());
+        }
+      });
+    }
   }, 3000);
 }
 function startup() {
