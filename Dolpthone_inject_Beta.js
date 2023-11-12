@@ -356,7 +356,7 @@ function indicatorsetup() {
       for (let i = 0; i < listel.length; i++) {
         let lcls = listel[i].classList;
         if (lcls.contains("movie")) {
-          if (listel[i].querySelector("a").classList.contains("is-selected")) {
+          if (listel[i].querySelector("div.zixPn")) {
             nowel = i;
           }
         }
