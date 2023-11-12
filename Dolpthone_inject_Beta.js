@@ -402,7 +402,7 @@ function finishChecker(pos, indiid, alert) {
   window.top.document.querySelector("#modal-inner-iframe").contentDocument.head.appendChild(renewedStyle);
   let listel = document.querySelectorAll("li")[pos];
   let checker = setInterval(() => {
-    if (listel.classList.contains("good")) {
+    if (listel.querySelector("i[style*='color: rgb(0, 197, 65);']")) {
       clearInterval(indiid);
       clearInterval(checker);
       libalert("TestCorrectChecker", "process ended.");
