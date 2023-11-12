@@ -84,7 +84,7 @@ function styleChecker() {
   let proc = setInterval(() => {
     // if (!window.top.document.querySelector("iframe")) return;
     if (!window.top.document.querySelector("iframe")) {
-      done();
+      location.reload();
     }
     let element = window.top.document.querySelector("iframe").contentDocument;
     element.querySelector("link#renewedStyle") || styleApply(element);
