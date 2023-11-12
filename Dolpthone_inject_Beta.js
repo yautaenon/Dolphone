@@ -379,7 +379,7 @@ function indicatorsetup() {
         if (nowel.querySelector("svg>circle:nth-of-type(2)")) {
           nowel.querySelector("svg>circle:nth-of-type(2)").setAttribute("stroke-dashoffset", 100 - percent);
         }
-        nowel.querySelector("div").style.setProperty("--movie-progress", `${percent}%`);
+        nowel.style.setProperty("--movie-progress", `${percent}%`);
         //nowel.style.background = `linear-gradient(90deg, #9fb 0%, #9fb ${percent}%,#ffffff ${percent}%,#ffffff 100%)`;
         //   document
         //     .querySelector(".progress-circle-color")
@@ -442,7 +442,7 @@ function finishChecker(pos, indiid, alert) {
   renewedStyle.rel = "stylesheet";
   renewedStyle.href = dolphoneCSS;
   renewedStyle.id = "renewedStyle";
-  window.top.document.querySelector("#modal-inner-iframe").contentDocument.head.appendChild(renewedStyle);
+  window.top.document.querySelector("iframe[title='教材']").contentDocument.head.appendChild(renewedStyle);
   let listel = document.querySelectorAll("li")[pos];
   let checker = setInterval(() => {
     if (listel.querySelector("i[style*='color: rgb(0, 197, 65);']")) {
