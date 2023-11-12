@@ -146,6 +146,11 @@ function done() {
 }
 function next() {
   mainalert("Trying to access next content.");
+  if (document.querySelector('div[aria-label="教材フィルタ"]').querySelectorAll(".khUwkq")) {
+    if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
+      document.querySelector('button[aria-label="必修教材のみ"]').click();
+    }
+  }
   const caps = window.top.document.querySelectorAll('[aria-label="必修教材リスト"]')[0].getElementsByTagName("li");
   let lastIndex = 0;
   for (const item in caps) {
