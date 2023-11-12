@@ -146,7 +146,6 @@ function done() {
 }
 function next() {
   mainalert("Trying to access next content.");
-  indicatorUpdate();
   const caps = window.top.document.querySelectorAll('[aria-label="必修教材リスト"]')[0].getElementsByTagName("li");
   let lastIndex = 0;
   for (const item in caps) {
@@ -169,6 +168,7 @@ function next() {
   let beforeLastIndex = lastIndex != 0 ? lastIndex - 1 : 0;
   caps[lastIndex].querySelector("div").click();
   setTimeout(() => {
+    indicatorUpdate();
     caps[beforeLastIndex].querySelector("div").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
     if (styleProcs.length > 1) {
       styleProcs.forEach((e, i) => {
