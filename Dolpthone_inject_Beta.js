@@ -95,6 +95,7 @@ function styleChecker() {
       });
   }, 1000);
   libalert("StyleChecker", `Process started and observing nodes. id: ${proc}`);
+  styleProcs.push(proc);
   return proc;
 }
 function styleApply(element) {
