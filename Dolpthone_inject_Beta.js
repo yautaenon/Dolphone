@@ -178,7 +178,9 @@ function next() {
     if (styleProcs.length > 1) {
       styleProcs.forEach((e, i) => {
         if (styleProcs.length > 1) {
-          clearInterval(styleProcs.pop());
+          let p = styleProcs.pop();
+          libalert("ProcessFixer", `Process [ ${p} ] is trashed.`);
+          clearInterval(p);
         }
       });
     }
