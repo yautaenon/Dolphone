@@ -166,7 +166,6 @@ function next() {
   caps[lastIndex].querySelector("div").click();
   setTimeout(() => {
     caps[beforeLastIndex].querySelector("div").scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-    indicatorUpdate();
   }, 3000);
 }
 function startup() {
