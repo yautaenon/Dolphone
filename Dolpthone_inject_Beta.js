@@ -408,21 +408,22 @@ function indicatorUpdate() {
     }
   }
   for (let i = 0; i < listel.length; i++) {
-    let lcls = listel[i].classList;
+    let lcls = listel[i].classList,
+      itemType = "unknown";
     if (lcls.contains("movie")) {
-      libalert("IndicatorUpdator", `Item [${i}] is "movie"`);
+      itemType = "movie";
       if (lcls.contains("good")) {
         //listel[i].style.backgroundColor = "#9fb";
-        libalert("IndicatorUpdator", `Item [${i}] is "movie-good"`);
+        itemType = "movie-good";
       }
     } else if (lcls.contains("evaluation-test") || lcls.contains("essay-test")) {
-      libalert("IndicatorUpdator", `Item [${i}] is "test"`);
+      itemType = "test";
       if (lcls.contains("good")) {
-        libalert("IndicatorUpdator", `Item [${i}] is "test-good"`);
+        itemType = "test-good";
         // listel[i].style.background = "#adbdeb";
       }
       if (listel[i].querySelector("div.zixPn")) {
-        libalert("IndicatorUpdator", `Item [${i}] is "test-progress"`);
+        itemType = "test-progress";
         listel[i].classList.add("now");
         alertsound.load();
         alertsound.loop = true;
@@ -434,6 +435,7 @@ function indicatorUpdate() {
         finishChecker(i, alertnot, alertsound);
       }
     }
+    libalert("IndicatorUpdator", `Item [ ${String(i + 1).padStart(2, 0)} ] is "${itemType}"`);
   }
   setTimeout(videochecker(2), 2000);
   libalert("Indicator", "Indicator Updated.");
