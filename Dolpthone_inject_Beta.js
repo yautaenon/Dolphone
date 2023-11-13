@@ -81,22 +81,24 @@ function subscribe() {
   }
 }
 function styleChecker() {
-  let proc = setInterval(() => {
-    // if (!window.top.document.querySelector("iframe")) return;
-    if (!window.top.document.querySelector("iframe")) {
-      location.reload();
-    }
-    let element = window.top.document.querySelector("iframe").contentDocument;
-    element.querySelector("link#renewedStyle") || styleApply(element);
-    let iniframe = Array.from(element.querySelectorAll("iframe"));
-    if (iniframe)
-      iniframe.forEach((e) => {
-        e.contentDocument.querySelector("link#renewedStyle") || styleApply(e.contentDocument);
-      });
-  }, 1000);
-  libalert("StyleChecker", `Process started and observing nodes. id: ${proc}`);
-  styleProcs.push(proc);
-  return proc;
+  setTimeout(() => {
+    let proc = setInterval(() => {
+      // if (!window.top.document.querySelector("iframe")) return;
+      if (!window.top.document.querySelector("iframe")) {
+        location.reload();
+      }
+      let element = window.top.document.querySelector("iframe").contentDocument;
+      element.querySelector("link#renewedStyle") || styleApply(element);
+      let iniframe = Array.from(element.querySelectorAll("iframe"));
+      if (iniframe)
+        iniframe.forEach((e) => {
+          e.contentDocument.querySelector("link#renewedStyle") || styleApply(e.contentDocument);
+        });
+    }, 1000);
+    libalert("StyleChecker", `Process started and observing nodes. id: ${proc}`);
+    styleProcs.push(proc);
+  }, 2000);
+  // return proc;
 }
 function styleApply(element) {
   let renewedStyle = document.createElement("link");
