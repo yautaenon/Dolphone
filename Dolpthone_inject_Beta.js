@@ -209,21 +209,19 @@ function startup() {
     renewedStyle.id = "renewedStyle";
     window.top.document.head.appendChild(renewedStyle);
     document.body.classList.add("izialready");
+    patchsound.load();
+    patchsound.volume = 0.2;
+    setTimeout(() => {
+      patchsound.play();
+      window.top.veralart(version, window_5209hbf298hew9jfiowg_Dolpthone_patch, re);
+      window.top.indicatorsetup();
+    }, 1000);
   }
   let version = window_5209hbf298hew9jfiowg_Dolpthone_version;
   let re = document.querySelector("script#di").className == "reinjected" ? "re" : "";
   //console.log("\u001b[33m[Dolpthone]Ver." + version + " " + re + "loaded.");
   if (re == "re") {
     mainalert("reinjected.");
-  }
-  patchsound.load();
-  patchsound.volume = 0.2;
-  if (!window.top.document.body.classList.contains("izialready")) {
-    setTimeout(() => {
-      patchsound.play();
-      window.top.veralart(version, window_5209hbf298hew9jfiowg_Dolpthone_patch, re);
-      window.top.indicatorsetup();
-    }, 1000);
   }
 }
 function calculateFontColor(colorstr) {
