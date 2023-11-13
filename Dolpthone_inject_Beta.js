@@ -16,9 +16,9 @@ $.getJSON("https://script.google.com/macros/s/AKfycbyQVJL5Uj3pqJLGSGJTctONz4OIN5
   alertsound = new Audio("https://raw.githubusercontent.com/yautaenon/Dolphone/main/Dolphone/alert_2315_002.wav");
   function setupOnClick() {
     startup();
+    subscribe();
+    styleChecker();
     setTimeout(() => {
-      subscribe();
-      styleChecker();
       if (!document.querySelector("iframe")) {
         next();
       }
