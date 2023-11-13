@@ -830,7 +830,7 @@ li.essay-test:last-child > a {
 
 li.evaluation-test.good,
 li.essay-test.good,
-ul[aria-label=必修教材リスト] > li:has(.iFkSEV):has(i[style*="color: rgb(0, 197, 65);"]) {
+ul[aria-label=必修教材リスト] > li:has(.iFkSEV):has(i[style*="color: rgb(0, 197, 65);"]):not(:has(.zixPn)) {
   background: var(--secondary);
   background: var(--md-sys-color-surface-container-highest);
   border-bottom: solid 5px var(--secondary) !important;
