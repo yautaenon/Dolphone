@@ -356,6 +356,11 @@ function indicatorsetup() {
     let indic = setInterval(() => {
       let listel = document.querySelectorAll("ul[aria-label='必修教材リスト']>li"),
         nowel = null;
+      if (document.querySelector('div[aria-label="教材フィルタ"]').querySelectorAll(".khUwkq")) {
+        if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
+          document.querySelector('button[aria-label="必修教材のみ"]').click();
+        }
+      }
       [...listel].forEach((e) => {
         if (e.querySelector('i[type="movie-rounded"]')) {
           e.classList.add("movie");
