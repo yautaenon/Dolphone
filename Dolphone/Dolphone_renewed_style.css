@@ -775,7 +775,8 @@ li.evaluation-test a.is-gate-closed::after {
   border: solid 1px var(--outline);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #888;
+  background-color: var(--onSurfaceVariant);
+  background-image: linear-gradient(to right, var(--primaryHover), var(--primaryHover));
 }
 ::-webkit-scrollbar-thumb:active {
   background-color: #666;
@@ -786,7 +787,7 @@ li.evaluation-test a.is-gate-closed::after {
 }
 
 li.movie > a.is-selected,
-ul[aria-label=必修教材リスト] > li:has(.zixPn) {
+ul[aria-label=必修教材リスト] > li:has(.zixPn) > div {
   background: linear-gradient(90deg, var(--tertiary) 0%, var(--tertiary) var(--movie-progress), transparent var(--movie-progress), transparent 100%);
   background: #000;
   border-bottom: solid 5px #000 !important;
