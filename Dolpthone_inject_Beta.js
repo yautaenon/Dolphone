@@ -369,6 +369,8 @@ function indicatorsetup() {
 						document.querySelector('button[aria-label="必修教材のみ"]').click();
 					}
 				}
+			} else {
+				libalert("FilterApplier", "Filter element is not found");
 			}
 			[...listel].forEach((e) => {
 				if (e.querySelector('i[type="movie-rounded"]')) {
