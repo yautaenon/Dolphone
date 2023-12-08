@@ -415,9 +415,11 @@ function indicatorsetup() {
 }
 function indicatorUpdate() {
 	let listel = document.querySelectorAll("ul[aria-label='必修教材リスト']>li");
-	if (document.querySelector('div[aria-label="教材フィルタ"]').querySelectorAll(".khUwkq")) {
-		if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
-			document.querySelector('button[aria-label="必修教材のみ"]').click();
+	if (document.querySelector('div[aria-label="教材フィルタ"]')) {
+		if (document.querySelector('div[aria-label="教材フィルタ"]').querySelectorAll(".khUwkq")) {
+			if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
+				document.querySelector('button[aria-label="必修教材のみ"]').click();
+			}
 		}
 	}
 	for (let i = 0; i < listel.length; i++) {
