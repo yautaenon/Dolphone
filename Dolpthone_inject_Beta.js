@@ -155,9 +155,11 @@ function done() {
 }
 function next() {
 	mainalert("Trying to access next content.");
-	if (document.querySelector('div[aria-label="教材フィルタ"]').querySelectorAll(".khUwkq")) {
-		if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
-			document.querySelector('button[aria-label="必修教材のみ"]').click();
+	if (document.querySelector('div[aria-label="教材フィルタ"]')) {
+		if (document.querySelector('div[aria-label="教材フィルタ"]').querySelectorAll(".khUwkq")) {
+			if (!document.querySelector('button[aria-label="必修教材のみ"]').classList.contains("ixzVeN")) {
+				document.querySelector('button[aria-label="必修教材のみ"]').click();
+			}
 		}
 	}
 	const caps = window.top.document.querySelectorAll('[aria-label="必修教材リスト"]')[0].getElementsByTagName("li");
@@ -369,8 +371,6 @@ function indicatorsetup() {
 						document.querySelector('button[aria-label="必修教材のみ"]').click();
 					}
 				}
-			} else {
-				libalert("FilterApplier", "Filter element is not found");
 			}
 			[...listel].forEach((e) => {
 				if (e.querySelector('i[type="movie-rounded"]')) {
